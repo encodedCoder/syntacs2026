@@ -32,20 +32,20 @@ const Schedule = () => {
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.05, duration: 0.5 }}
-              className="group flex items-center gap-6 p-6 rounded-2xl bg-white/[0.01] border border-white/5 hover:bg-white/[0.03] hover:border-white/10 transition-all duration-300"
+              className="group flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6 p-5 sm:p-6 rounded-2xl bg-white/[0.01] border border-white/5 hover:bg-white/[0.03] hover:border-white/10 transition-all duration-300"
             >
-              <div className="w-40 flex-shrink-0">
-                <span className="text-white/30 font-mono text-[10px] uppercase tracking-widest">{item.time}</span>
+              <div className="sm:w-40 flex-shrink-0">
+                <span className="text-white/30 font-mono text-[9px] sm:text-[10px] uppercase tracking-widest">{item.time}</span>
               </div>
               
               <div className="flex-grow">
-                <h3 className="text-base font-bold tracking-tight text-white/90 group-hover:text-white transition-colors">
+                <h3 className="text-sm sm:text-base font-bold tracking-tight text-white/90 group-hover:text-white transition-colors">
                   {item.event}
                 </h3>
               </div>
 
-              <div className="text-right">
-                <span className="text-[9px] font-mono uppercase tracking-[0.1em] text-white/10 px-2 py-0.5 rounded-full border border-white/5 whitespace-nowrap">
+              <div className="sm:text-right mt-2 sm:mt-0 self-start sm:self-auto">
+                <span className="text-[8px] sm:text-[9px] font-mono uppercase tracking-[0.1em] text-white/10 px-2 py-0.5 rounded-full border border-white/5 whitespace-nowrap">
                   {item.location}
                 </span>
               </div>

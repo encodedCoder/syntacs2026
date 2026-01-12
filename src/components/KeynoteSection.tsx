@@ -47,27 +47,27 @@ const KeynoteSection = () => {
               className="group relative"
             >
               <div className="absolute inset-0 bg-white/[0.02] border border-white/10 rounded-[2rem] transition-all duration-500 group-hover:bg-white/[0.04] group-hover:border-white/20" />
-              <div className="relative p-10 flex flex-col h-full min-h-[350px] justify-between">
+              <div className="relative p-7 sm:p-10 flex flex-col h-full min-h-[300px] sm:min-h-[350px] justify-between">
                 <div>
-                  <div className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center mb-8 border border-white/10 group-hover:bg-white/10 transition-colors">
-                    <speaker.icon size={24} className="text-white/60" />
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white/5 rounded-2xl flex items-center justify-center mb-6 sm:mb-8 border border-white/10 group-hover:bg-white/10 transition-colors">
+                    <speaker.icon size={22} className="text-white/60" />
                   </div>
-                  <h3 className="text-3xl font-bold tracking-tight mb-2 group-hover:text-white transition-colors capitalize italic">
+                  <h3 className="text-2xl sm:text-3xl font-bold tracking-tight mb-2 group-hover:text-white transition-colors capitalize italic">
                     {speaker.name}
                   </h3>
-                  <p className="text-white/60 text-lg font-medium">{speaker.role}</p>
-                  <p className="text-white/30 text-base">{speaker.org}</p>
+                  <p className="text-white/60 text-base sm:text-lg font-medium">{speaker.role}</p>
+                  <p className="text-white/30 text-sm sm:text-base">{speaker.org}</p>
                 </div>
 
-                <div className="mt-8">
-                  <span className="text-sm uppercase tracking-widest font-mono text-white/20">
+                <div className="mt-6 sm:mt-8">
+                  <span className="text-[10px] sm:text-sm uppercase tracking-widest font-mono text-white/20">
                     Selection In Progress...
                   </span>
                 </div>
 
                 {/* Decorative Element */}
-                <div className="absolute bottom-12 right-12 opacity-[0.03] group-hover:opacity-10 transition-opacity duration-500 text-white">
-                  <speaker.icon size={160} strokeWidth={0.5} />
+                <div className="absolute bottom-8 right-8 sm:bottom-12 sm:right-12 opacity-[0.03] group-hover:opacity-10 transition-opacity duration-500 text-white pointer-events-none">
+                  <speaker.icon size={120} strokeWidth={0.5} className="sm:w-40 sm:h-40" />
                 </div>
               </div>
             </motion.div>

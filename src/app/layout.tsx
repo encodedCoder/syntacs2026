@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
-    title: "SYNTACS 2026",
+    title: "SYNTACS",
   },
 };
 
