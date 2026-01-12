@@ -1,101 +1,62 @@
-import Image from "next/image";
+import Navbar from "@/components/Navbar";
+import SyntacsScroll26 from "@/components/SyntacsScroll26";
+import KeynoteSection from "@/components/KeynoteSection";
+import Schedule from "@/components/Schedule";
+import EventInfo from "@/components/EventInfo";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <main className="min-h-screen bg-[#050505]">
+      <Navbar />
+      
+      {/* High-End Scrollytelling Hero */}
+      <SyntacsScroll26 />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* Symposium Content */}
+      <div className="relative">
+        <KeynoteSection />
+        <Schedule />
+        <EventInfo />
+      </div>
+
+      {/* Footer */}
+      <footer className="py-24 border-t border-white/5 bg-[#050505]">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-12">
+            <div>
+              <div className="flex items-center gap-3 mb-8">
+                <div className="w-10 h-10 bg-white flex items-center justify-center rounded-xl">
+                  <span className="text-black font-black text-sm">S26</span>
+                </div>
+                <span className="font-bold tracking-tighter text-2xl text-white/90">SYNTACS '26</span>
+              </div>
+              <p className="text-white/20 text-sm max-w-sm leading-relaxed font-light">
+                The Symposium on Novel Technologies and Advances in Computer Science returns 
+                to IIT Ropar for its most immersive edition yet.
+              </p>
+            </div>
+            
+            <div className="flex flex-wrap gap-x-16 gap-y-8">
+              <div className="space-y-4">
+                <p className="text-[10px] uppercase tracking-[0.4em] text-white/10 font-mono mb-6">Navigation</p>
+                <a href="#keynotes" className="block text-sm text-white/40 hover:text-white transition-colors">Keynotes</a>
+                <a href="#program" className="block text-sm text-white/40 hover:text-white transition-colors">Program</a>
+                <a href="#info" className="block text-sm text-white/40 hover:text-white transition-colors">Venue</a>
+                <a href="https://iitrpr.ac.in/" target="_blank" className="block text-sm text-white/40 hover:text-white transition-colors">IIT Ropar</a>
+              </div>
+            </div>
+          </div>
+          
+          <div className="mt-24 pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between gap-8">
+            <p className="text-white/20 text-[10px] font-mono tracking-widest uppercase">
+              © 2026 INDIAN INSTITUTE OF TECHNOLOGY ROPAR.
+            </p>
+            <div className="flex gap-6">
+              <span className="text-white/20 text-[10px] font-mono uppercase">Designed by encodedCoder</span>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
       </footer>
-    </div>
+    </main>
   );
 }
