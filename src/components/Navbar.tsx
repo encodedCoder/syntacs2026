@@ -59,16 +59,16 @@ const Navbar = () => {
             <div className="w-8 h-8 bg-white flex items-center justify-center rounded-lg group-hover:scale-110 transition-transform">
               <span className="text-black font-bold text-xs">S26</span>
             </div>
-            <span className="font-bold tracking-tighter text-lg sm:text-xl">SYNTACS '26</span>
+            <span className="font-bold tracking-tighter text-xl sm:text-2xl text-white">SYNTACS '26</span>
           </Link>
 
-          <div className="flex items-center gap-4 md:gap-8">
-            <div className="hidden md:flex items-center gap-8">
+          <div className="flex items-center gap-6 md:gap-12">
+            <div className="hidden md:flex items-center gap-10">
               {navLinks.map((link) => (
                 <a 
                   key={link.name} 
                   href={link.href} 
-                  className="text-sm font-medium text-white/40 hover:text-white transition-colors"
+                  className="text-lg font-medium tracking-tight text-white/40 hover:text-white transition-all duration-300"
                 >
                   {link.name}
                 </a>
@@ -79,7 +79,7 @@ const Navbar = () => {
               href="https://www.syntacs2025.site/register" 
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-2 bg-white text-black text-sm font-bold rounded-full hover:scale-105 transition-transform"
+              className="px-8 py-2.5 bg-white text-black text-base font-bold rounded-full hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.1)]"
             >
               Register
             </a>
