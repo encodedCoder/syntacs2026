@@ -3,6 +3,7 @@
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import Link from "next/link";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -12,7 +13,7 @@ const Navbar = () => {
   const { scrollY } = useScroll();
 
   useEffect(() => {
-    return scrollY.onChange((latest) => {
+    return scrollY.on("change", (latest) => {
       setIsScrolled(latest > 50);
       
       // Show/Hide logic: Show on scroll up, hide on scroll down (if not at top)
@@ -45,12 +46,21 @@ const Navbar = () => {
         className="fixed top-0 left-0 right-0 z-[100] px-6 py-6"
       >
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <a href="/" className="group flex items-center gap-3">
+          <Link 
+            href="/" 
+            className="group flex items-center gap-3"
+            onClick={(e) => {
+              if (window.location.pathname === "/") {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }
+            }}
+          >
             <div className="w-8 h-8 bg-white flex items-center justify-center rounded-lg group-hover:scale-110 transition-transform">
               <span className="text-black font-bold text-xs">S26</span>
             </div>
             <span className="font-bold tracking-tighter text-lg sm:text-xl">SYNTACS '26</span>
-          </a>
+          </Link>
 
           <div className="flex items-center gap-4 md:gap-8">
             <div className="hidden md:flex items-center gap-8">

@@ -89,6 +89,10 @@ const SyntacsScroll26 = () => {
     };
 
     const unsubscribe = frameIndex.on("change", render);
+    
+    // Initial render call
+    render();
+
     return () => unsubscribe();
   }, [images, frameIndex]);
 
