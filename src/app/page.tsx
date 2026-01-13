@@ -3,6 +3,7 @@ import SyntacsScroll26 from "@/components/SyntacsScroll26";
 import KeynoteSection from "@/components/KeynoteSection";
 import Schedule from "@/components/Schedule";
 import EventInfo from "@/components/EventInfo";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -39,9 +40,9 @@ export default function Home() {
             <div className="flex flex-wrap gap-x-16 gap-y-8">
               <div className="space-y-4">
                 <p className="text-[10px] uppercase tracking-[0.4em] text-white/10 font-mono mb-6">Navigation</p>
-                <a href="#keynotes" className="block text-sm text-white/40 hover:text-white transition-colors">Keynotes</a>
-                <a href="#program" className="block text-sm text-white/40 hover:text-white transition-colors">Program</a>
-                <a href="#info" className="block text-sm text-white/40 hover:text-white transition-colors">Venue</a>
+                <Link href="#keynotes" className="block text-sm text-white/40 hover:text-white transition-colors">Keynotes</Link>
+                <Link href="#program" className="block text-sm text-white/40 hover:text-white transition-colors">Program</Link>
+                <Link href="#info" className="block text-sm text-white/40 hover:text-white transition-colors">Venue</Link>
                 <a href="https://iitrpr.ac.in/" target="_blank" className="block text-sm text-white/40 hover:text-white transition-colors">IIT Ropar</a>
               </div>
             </div>

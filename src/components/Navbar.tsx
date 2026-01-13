@@ -7,11 +7,25 @@ import { Menu, X } from "lucide-react";
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
   const { scrollY } = useScroll();
 
   useEffect(() => {
-    return scrollY.onChange((latest) => setIsScrolled(latest > 50));
-  }, [scrollY]);
+    return scrollY.onChange((latest) => {
+      setIsScrolled(latest > 50);
+      
+      // Show/Hide logic: Show on scroll up, hide on scroll down (if not at top)
+      if (latest < 50) {
+        setIsVisible(true);
+      } else if (latest > lastScrollY) {
+        setIsVisible(false);
+      } else {
+        setIsVisible(true);
+      }
+      setLastScrollY(latest);
+    });
+  }, [scrollY, lastScrollY]);
 
   const navLinks = [
     { name: "Keynotes", href: "#keynotes" },
@@ -22,11 +36,13 @@ const Navbar = () => {
   return (
     <>
       <motion.nav
+        animate={{ y: isVisible || isMobileMenuOpen ? 0 : -100 }}
+        transition={{ duration: 0.3 }}
         style={{ 
           backgroundColor: `rgba(5, 5, 5, ${isScrolled || isMobileMenuOpen ? 0.9 : 0})`,
           backdropFilter: `blur(${isScrolled || isMobileMenuOpen ? 12 : 0}px)`,
         }}
-        className="fixed top-0 left-0 right-0 z-[100] px-6 py-6 transition-all duration-300"
+        className="fixed top-0 left-0 right-0 z-[100] px-6 py-6"
       >
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <a href="/" className="group flex items-center gap-3">

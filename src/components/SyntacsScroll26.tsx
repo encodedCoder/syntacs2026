@@ -13,6 +13,14 @@ const SyntacsScroll26 = () => {
   const [images, setImages] = useState<HTMLImageElement[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [loadedCount, setLoadedCount] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -29,13 +37,16 @@ const SyntacsScroll26 = () => {
 
   useEffect(() => {
     const preloadImages = async () => {
+      setIsLoading(true);
+      setLoadedCount(0);
       const loadedImages: HTMLImageElement[] = [];
       let count = 0;
 
       const loadImage = (index: number) => {
         return new Promise<void>((resolve) => {
           const img = new Image();
-          img.src = `/frames/frame_${index}_delay-0.04s.jpg`;
+          const folder = isMobile ? 'frames_mobile' : 'frames';
+          img.src = `/${folder}/frame_${index}_delay-0.04s.jpg`;
           img.onload = () => {
             loadedImages[index] = img;
             count++;
@@ -57,7 +68,7 @@ const SyntacsScroll26 = () => {
     };
 
     preloadImages();
-  }, []);
+  }, [isMobile]);
 
   useEffect(() => {
     const render = () => {
@@ -77,15 +88,18 @@ const SyntacsScroll26 = () => {
       }
     };
 
-    frameIndex.onChange(render);
-    return () => frameIndex.destroy();
+    const unsubscribe = frameIndex.on("change", render);
+    return () => unsubscribe();
   }, [images, frameIndex]);
+
+  const canvasWidth = isMobile ? 1080 : 1920;
+  const canvasHeight = isMobile ? 1920 : 1080;
 
   return (
     <div ref={containerRef} className="relative h-[400vh] bg-[#050505]">
       <div className="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden">
         {isLoading && (
-          <div className="absolute inset-0 z-50 flex flex-col items-center justify-center bg-[#050505]">
+          <div className="absolute inset-0 z-50 flex flex-col items-center justify-center bg-[#050505]" suppressHydrationWarning>
             <div className="w-12 h-12 border-4 border-white/20 border-t-white rounded-full animate-spin mb-4" />
             <p className="text-white/40 font-mono tracking-widest uppercase text-[10px] md:text-xs">
               Deconstructing Reality {Math.round((loadedCount / TOTAL_FRAMES) * 100)}%
@@ -95,9 +109,10 @@ const SyntacsScroll26 = () => {
         
         <canvas
           ref={canvasRef}
-          width={CANVAS_WIDTH}
-          height={CANVAS_HEIGHT}
-          className="w-full h-full object-contain pointer-events-none opacity-40 md:opacity-50 mix-blend-screen"
+          width={canvasWidth}
+          height={canvasHeight}
+          className="w-full h-full object-cover pointer-events-none opacity-40 md:opacity-50 mix-blend-screen"
+          suppressHydrationWarning
         />
 
         {/* Text Overlays */}
