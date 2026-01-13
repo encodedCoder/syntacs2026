@@ -56,10 +56,15 @@ const Navbar = () => {
               }
             }}
           >
-            <div className="w-8 h-8 bg-white flex items-center justify-center rounded-lg group-hover:scale-110 transition-transform">
-              <span className="text-black font-bold text-xs">S26</span>
+            <div className="group-hover:scale-110 transition-transform flex items-center gap-2">
+              <motion.div className="w-8 h-8 bg-white flex items-center justify-center rounded-lg">
+                <span className="text-black font-bold text-sm">S26</span>
+              </motion.div>
+              <span className="font-bold tracking-tighter text-xl sm:text-2xl text-white">
+                SYNTACS<span className="hidden min-[375px]:inline"> '26</span>
+              </span>
             </div>
-            <span className="font-bold tracking-tighter text-xl sm:text-2xl text-white">SYNTACS '26</span>
+
           </Link>
 
           <div className="flex items-center gap-6 md:gap-12">
@@ -68,7 +73,7 @@ const Navbar = () => {
                 <a 
                   key={link.name} 
                   href={link.href} 
-                  className="text-lg font-medium tracking-tight text-white/40 hover:text-white transition-all duration-300"
+                  className="px-4 py-1.5 sm:px-8 sm:py-2.5 text-[10px] sm:text-sm font-medium rounded-full tracking-tight bg-white text-black/90 hover:text-black hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.1)]"
                 >
                   {link.name}
                 </a>
@@ -79,7 +84,7 @@ const Navbar = () => {
               href="https://www.syntacs2025.site/register" 
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-2.5 bg-white text-black text-base font-bold rounded-full hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.1)]"
+              className="px-5 py-2 sm:px-8 sm:py-2.5 bg-white text-black text-xs sm:text-base font-bold rounded-full hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.1)]"
             >
               Register
             </a>
