@@ -106,7 +106,7 @@ const SyntacsScroll26 = () => {
           <div className="absolute inset-0 z-50 flex flex-col items-center justify-center bg-[#050505]" suppressHydrationWarning>
             <div className="w-12 h-12 border-4 border-white/20 border-t-white rounded-full animate-spin mb-4" />
             <p className="text-white/40 font-mono tracking-widest uppercase text-[10px] md:text-xs">
-              Deconstructing Reality {Math.round((loadedCount / TOTAL_FRAMES) * 100)}%
+              Welcome to SYNTACS 2026 {Math.round((loadedCount / TOTAL_FRAMES) * 100)}%
             </p>
           </div>
         )}
@@ -128,10 +128,10 @@ const SyntacsScroll26 = () => {
           >
             <div className="text-center">
               <h1 className="text-5xl md:text-9xl font-bold tracking-tighter mb-4 text-white">
-                SYNTACS<span className="text-white/20">'26</span>
+                2026
               </h1>
-              <p className="text-sm md:text-xl font-light tracking-[0.2em] md:tracking-[0.3em] uppercase text-white/40">
-                Future of Computational Intelligence
+              <p className="text-sm md:text-xl font-light tracking-[0.2em] md:tracking-[0.3em] uppercase text-white transform translate-y-9">
+                On 20-21 March 2026, CSE Department, IIT Ropar
               </p>
             </div>
           </motion.div>
