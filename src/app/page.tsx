@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import SyntacsScroll26 from "@/components/SyntacsScroll26";
+import WelcomeSection from "@/components/WelcomeSection";
 import KeynoteSection from "@/components/KeynoteSection";
 import Schedule from "@/components/Schedule";
 import EventInfo from "@/components/EventInfo";
@@ -12,6 +13,9 @@ export default function Home() {
       
       {/* High-End Scrollytelling Hero */}
       <SyntacsScroll26 />
+
+      {/* Welcome Section */}
+      <WelcomeSection />
 
       {/* Symposium Content */}
       <div className="relative">

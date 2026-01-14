@@ -124,15 +124,24 @@ const SyntacsScroll26 = () => {
           {/* 0% Scroll */}
           <motion.div 
             style={{ opacity: useTransform(smoothProgress, [0, 0.15], [1, 0]) }}
-            className="absolute inset-0 flex items-center justify-center"
+            className="absolute inset-0 flex items-center justify-center pointer-events-none"
           >
-            <div className="text-center transform translate-y-12 md:translate-y-0">
+            <div className="text-center transform translate-y-12 md:translate-y-0 pointer-events-auto">
               <h1 className="text-7xl md:text-9xl font-bold tracking-tighter mb-4 text-white">
                 2026
               </h1>
-              <p className="text-sm md:text-xl font-light tracking-[0.2em] md:tracking-[0.3em] uppercase text-white transform md:translate-y-9">
-                20–21 March · CSE · IIT Ropar
+              <p className="text-sm md:text-xl font-light tracking-[0.2em] md:tracking-[0.3em] uppercase text-white transform md:translate-y-9 mb-8 md:mb-16">
+                Department of Computer Science & Engineering, IIT Ropar · 20–21 March
               </p>
+              <motion.a
+                href="#welcome"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5, duration: 0.8 }}
+                className="inline-block px-8 py-3 md:px-10 md:py-4 border border-white/20 hover:border-white/40 bg-white/5 hover:bg-white/10 text-white text-xs md:text-sm font-medium tracking-[0.2em] uppercase rounded-full transition-all duration-300 backdrop-blur-sm"
+              >
+                Learn More
+              </motion.a>
             </div>
           </motion.div>
 
