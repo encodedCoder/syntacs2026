@@ -130,8 +130,8 @@ const SyntacsScroll26 = () => {
               <h1 className="text-7xl md:text-9xl font-bold tracking-tighter mb-4 text-white">
                 2026
               </h1>
-              <p className="text-sm md:text-xl font-light tracking-[0.2em] md:tracking-[0.3em] uppercase text-white transform translate-y-9">
-                On 20-21 March 2026, CSE Department, IIT Ropar
+              <p className="text-sm md:text-xl font-light tracking-[0.2em] md:tracking-[0.3em] uppercase text-white transform md:translate-y-9">
+                20–21 March · CSE · IIT Ropar
               </p>
             </div>
           </motion.div>
