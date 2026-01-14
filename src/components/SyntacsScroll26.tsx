@@ -126,8 +126,8 @@ const SyntacsScroll26 = () => {
             style={{ opacity: useTransform(smoothProgress, [0, 0.15], [1, 0]) }}
             className="absolute inset-0 flex items-center justify-center"
           >
-            <div className="text-center">
-              <h1 className="text-5xl md:text-9xl font-bold tracking-tighter mb-4 text-white">
+            <div className="text-center transform translate-y-12 md:translate-y-0">
+              <h1 className="text-7xl md:text-9xl font-bold tracking-tighter mb-4 text-white">
                 2026
               </h1>
               <p className="text-sm md:text-xl font-light tracking-[0.2em] md:tracking-[0.3em] uppercase text-white transform translate-y-9">
