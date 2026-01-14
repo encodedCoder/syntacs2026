@@ -1,47 +1,117 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 
 const WelcomeSection = () => {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start end", "end start"],
+  });
+
+  const y1 = useTransform(scrollYProgress, [0, 1], [0, -100]);
+  const y2 = useTransform(scrollYProgress, [0, 1], [0, 100]);
+  const rotate = useTransform(scrollYProgress, [0, 1], [0, 10]);
+
   return (
-    <section id="welcome" className="relative py-24 md:py-32 bg-[#050505] overflow-hidden">
-      {/* Background Decor */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-      
-      <div className="max-w-4xl mx-auto px-6 relative">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-3xl md:text-5xl font-bold tracking-tighter text-white mb-6">
-            Welcome to SYNTACS 2026
-          </h2>
-          <div className="w-20 h-1 bg-white/20 mx-auto rounded-full mb-12" />
-        </motion.div>
+    <section 
+      ref={containerRef}
+      id="welcome" 
+      className="relative py-32 md:py-48 bg-[#050505] overflow-hidden"
+    >
+      {/* Background Aesthetic Elements */}
+      <div className="absolute inset-0 z-0">
+        <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-white/5 rounded-full blur-[120px] -translate-y-1/2" />
+        <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-white/5 rounded-full blur-[100px] translate-y-1/2" />
+        
+        {/* Subtle Grid */}
+        <div 
+          className="absolute inset-0 opacity-[0.03]" 
+          style={{ 
+            backgroundImage: `linear-gradient(to right, white 1px, transparent 1px), linear-gradient(to bottom, white 1px, transparent 1px)`,
+            backgroundSize: '40px 40px'
+          }} 
+        />
+      </div>
 
-        <div className="grid gap-8 md:gap-12">
-          <motion.p
+      {/* Decorative Floating Lines */}
+      <motion.div style={{ y: y1 }} className="absolute top-20 right-[10%] w-px h-64 bg-gradient-to-b from-transparent via-white/20 to-transparent hidden md:block" />
+      <motion.div style={{ y: y2 }} className="absolute bottom-20 left-[10%] w-px h-64 bg-gradient-to-b from-transparent via-white/20 to-transparent hidden md:block" />
+
+      <div className="max-w-5xl mx-auto px-6 relative z-10">
+        <div className="flex flex-col items-center">
+          {/* Section Label */}
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-6 flex items-center gap-3"
+          >
+            <div className="h-px w-8 bg-white/20" />
+            <span className="text-[10px] md:text-xs font-mono tracking-[0.4em] text-white/40 uppercase italic">
+              Initialization // 01
+            </span>
+            <div className="h-px w-8 bg-white/20" />
+          </motion.div>
+
+          {/* Heading with Gradient */}
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-white/60 text-base md:text-lg leading-relaxed text-justify font-light"
+            transition={{ duration: 0.8 }}
+            className="text-4xl md:text-7xl font-bold tracking-tighter text-center mb-12"
           >
-            IIT Ropar's Computer Science and Engineering department proudly introduces <span className="text-white font-medium">SYNTACS</span>, <span className="text-white font-medium">SY</span>mposium on <span className="text-white font-medium">N</span>ovel <span className="text-white font-medium">T</span>echnologies and <span className="text-white font-medium">A</span>dvances in <span className="text-white font-medium">C</span>omputer <span className="text-white font-medium">S</span>cience, a Research Scholars Day aimed at fostering collaboration and knowledge exchange within the academic community. This event serves as a platform to bring together research scholars from diverse backgrounds, creating an environment conducive to networking and collaboration.
-          </motion.p>
+            <span className="text-white">Welcome to </span>
+            <span className="bg-clip-text text-transparent bg-gradient-to-b from-white to-white/40">
+              SYNTACS 2026
+            </span>
+          </motion.h2>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+          {/* Glassmorphism Card */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-white/60 text-base md:text-lg leading-relaxed text-justify font-light"
+            transition={{ duration: 1 }}
+            className="w-full bg-white/[0.02] border border-white/5 backdrop-blur-3xl rounded-3xl p-8 md:p-16 relative overflow-hidden group"
           >
-            Organized by CSE IIT Ropar, <span className="text-white font-medium">SYNTACS</span> will feature insightful talks by two prominent speakers, providing attendees with valuable insights into cutting-edge research and industry trends. The event will also include engaging poster sessions and demo sessions, offering scholars an opportunity to showcase their work and receive constructive feedback. We extend a warm invitation to all researchers to join us in this enriching experience, broaden your professional network, and make the most of <span className="text-white font-medium">SYNTACS</span> - a day full of learning and collaborative opportunities.
-          </motion.p>
+            {/* Inner Glow */}
+            <div className="absolute -top-24 -left-24 w-48 h-48 bg-white/10 rounded-full blur-[60px] opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
+            
+            <div className="grid gap-10 md:gap-14 relative z-10">
+              <motion.p
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="text-white/50 text-base md:text-xl leading-relaxed text-justify md:text-left font-light"
+              >
+                IIT Ropar's Computer Science and Engineering department proudly introduces <span className="text-white font-medium">SYNTACS</span>, <span className="text-white font-medium italic underline decoration-white/20 underline-offset-4">SY</span>mposium on <span className="text-white font-medium italic underline decoration-white/20 underline-offset-4">N</span>ovel <span className="text-white font-medium italic underline decoration-white/20 underline-offset-4">T</span>echnologies and <span className="text-white font-medium italic underline decoration-white/20 underline-offset-4">A</span>dvances in <span className="text-white font-medium italic underline decoration-white/20 underline-offset-4">C</span>omputer <span className="text-white font-medium italic underline decoration-white/20 underline-offset-4">S</span>cience, a Research Scholars Day aimed at fostering collaboration and knowledge exchange within the academic community. This event serves as a platform to bring together research scholars from diverse backgrounds, creating an environment conducive to networking and collaboration.
+              </motion.p>
+
+              <motion.p
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                className="text-white/50 text-base md:text-xl leading-relaxed text-justify md:text-left font-light border-l border-white/10 pl-8 md:pl-12"
+              >
+                Organized by CSE IIT Ropar, <span className="text-white font-medium">SYNTACS</span> will feature insightful talks by two prominent speakers, providing attendees with valuable insights into cutting-edge research and industry trends. The event will also include engaging poster sessions and demo sessions, offering scholars an opportunity to showcase their work and receive constructive feedback. We extend a warm invitation to all researchers to join us in this enriching experience, broaden your professional network, and make the most of <span className="text-white font-medium">SYNTACS</span> - a day full of learning and collaborative opportunities.
+              </motion.p>
+            </div>
+
+            {/* Tech Corner Decor */}
+            <div className="absolute top-0 right-0 p-4 opacity-20">
+              <div className="w-12 h-px bg-white" />
+              <div className="h-12 w-px bg-white ml-auto" />
+            </div>
+            <div className="absolute bottom-0 left-0 p-4 opacity-20">
+              <div className="h-12 w-px bg-white" />
+              <div className="w-12 h-px bg-white" />
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>
