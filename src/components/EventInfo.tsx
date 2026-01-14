@@ -89,7 +89,6 @@ const EventInfo = () => {
             <div className="flex items-center gap-12 pt-10 border-t border-white/10 grayscale opacity-40">
               <div className="text-sm font-mono tracking-widest font-bold">IIT ROPAR</div>
               <div className="text-sm font-mono tracking-widest font-bold">CSE DEPARTMENT</div>
-              <div className="text-sm font-mono tracking-widest font-bold">ENCODED CODER</div>
             </div>
           </motion.div>
 
