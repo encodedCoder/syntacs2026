@@ -1,29 +1,21 @@
 import Navbar from "@/components/Navbar";
-import SyntacsScroll26 from "@/components/SyntacsScroll26";
-import WelcomeSection from "@/components/WelcomeSection";
-import KeynotePreview from "@/components/KeynotePreview";
-import ProgramPreview from "@/components/ProgramPreview";
-import VenuePreview from "@/components/VenuePreview";
+import PageHero from "@/components/PageHero";
+import KeynoteSection from "@/components/KeynoteSection";
 import Link from "next/link";
 import { Youtube, Twitter, Instagram, Linkedin, MapPin, Mail } from "lucide-react";
 
-export default function Home() {
+export default function KeynotesPage() {
   return (
     <main className="min-h-screen bg-[#050505]">
       <Navbar />
       
-      {/* High-End Scrollytelling Hero */}
-      <SyntacsScroll26 />
+      <PageHero 
+        title="KEYNOTE DISCOURSE"
+        subtitle="SYNTACS 2026"
+        description="World-renowned speakers exploring the frontiers of computational intelligence and emerging technologies."
+      />
 
-      {/* Welcome Section */}
-      <WelcomeSection />
-
-      {/* Symposium Content - Preview Sections */}
-      <div className="relative">
-        <KeynotePreview />
-        <ProgramPreview />
-        <VenuePreview />
-      </div>
+      <KeynoteSection />
 
       {/* Footer */}
       <footer className="py-24 border-t border-white/5 bg-[#050505] relative overflow-hidden">

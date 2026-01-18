@@ -29,9 +29,9 @@ const Navbar = () => {
   }, [scrollY, lastScrollY]);
 
   const navLinks = [
-    { name: "Keynotes", href: "#keynotes" },
-    { name: "Program", href: "#program" },
-    { name: "Venue & Contact", href: "#info" },
+    { name: "Keynotes", href: "/keynotes" },
+    { name: "Program", href: "/program" },
+    { name: "Venue", href: "/venue" },
   ];
 
   return (
@@ -49,12 +49,6 @@ const Navbar = () => {
           <Link 
             href="/" 
             className="group flex items-center gap-3"
-            onClick={(e) => {
-              if (window.location.pathname === "/") {
-                e.preventDefault();
-                window.scrollTo({ top: 0, behavior: "smooth" });
-              }
-            }}
           >
             <div className="group-hover:scale-110 transition-transform flex items-center gap-2">
               <motion.div className="w-8 h-8 bg-white flex items-center justify-center rounded-lg">
@@ -70,24 +64,22 @@ const Navbar = () => {
           <div className="flex items-center gap-6 md:gap-12">
             <div className="hidden md:flex items-center gap-10">
               {navLinks.map((link) => (
-                <a 
+                <Link 
                   key={link.name} 
                   href={link.href} 
                   className="px-4 py-1.5 sm:px-8 sm:py-2.5 text-[10px] sm:text-sm font-medium rounded-full tracking-tight bg-white text-black/90 hover:text-black hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.1)]"
                 >
                   {link.name}
-                </a>
+                </Link>
               ))}
             </div>
             
-            <a 
-              href="https://www.syntacs2025.site/register" 
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link 
+              href="/call-for-papers"
               className="px-5 py-2 sm:px-8 sm:py-2.5 bg-white text-black text-xs sm:text-base font-bold rounded-full hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.1)]"
             >
-              Register
-            </a>
+              Call for Papers
+            </Link>
 
             {/* Mobile Menu Toggle */}
             <button 
@@ -112,17 +104,20 @@ const Navbar = () => {
           >
             <div className="flex flex-col gap-10">
               {navLinks.map((link, index) => (
-                <motion.a
+                <motion.div
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.1 * (index + 1) }}
                   key={link.name}
-                  href={link.href}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="text-4xl font-bold tracking-tighter text-white/40 hover:text-white transition-colors"
                 >
-                  {link.name}
-                </motion.a>
+                  <Link
+                    href={link.href}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="text-4xl font-bold tracking-tighter text-white/40 hover:text-white transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </motion.div>
               ))}
               
               <motion.div 

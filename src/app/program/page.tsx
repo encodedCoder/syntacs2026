@@ -1,38 +1,28 @@
 import Navbar from "@/components/Navbar";
-import SyntacsScroll26 from "@/components/SyntacsScroll26";
-import WelcomeSection from "@/components/WelcomeSection";
-import KeynotePreview from "@/components/KeynotePreview";
-import ProgramPreview from "@/components/ProgramPreview";
-import VenuePreview from "@/components/VenuePreview";
+import PageHero from "@/components/PageHero";
+import Schedule from "@/components/Schedule";
 import Link from "next/link";
 import { Youtube, Twitter, Instagram, Linkedin, MapPin, Mail } from "lucide-react";
 
-export default function Home() {
+export default function ProgramPage() {
   return (
     <main className="min-h-screen bg-[#050505]">
       <Navbar />
       
-      {/* High-End Scrollytelling Hero */}
-      <SyntacsScroll26 />
+      <PageHero 
+        title="SYMPOSIUM PROGRAM"
+        subtitle="SYNTACS 2026"
+        description="Two days of rigorous discourse, collaborative sessions, and technological breakthroughs on 20-21 March 2026."
+      />
 
-      {/* Welcome Section */}
-      <WelcomeSection />
-
-      {/* Symposium Content - Preview Sections */}
-      <div className="relative">
-        <KeynotePreview />
-        <ProgramPreview />
-        <VenuePreview />
-      </div>
+      <Schedule />
 
       {/* Footer */}
       <footer className="py-24 border-t border-white/5 bg-[#050505] relative overflow-hidden">
-        {/* Background Decor */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
         
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-16 mb-24">
-            {/* Branding & Description */}
             <div className="md:col-span-4">
               <div className="flex items-center gap-3 mb-8">
                 <div className="w-10 h-10 bg-white flex items-center justify-center rounded-xl">
@@ -63,7 +53,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Quick Links */}
             <div className="md:col-span-2">
               <p className="text-[10px] uppercase tracking-[0.4em] text-white/20 font-mono mb-8">Navigation</p>
               <ul className="space-y-4">
@@ -74,7 +63,6 @@ export default function Home() {
               </ul>
             </div>
 
-            {/* Contact Details */}
             <div className="md:col-span-3">
               <p className="text-[10px] uppercase tracking-[0.4em] text-white/20 font-mono mb-8">Contact Details</p>
               <div className="space-y-6">
@@ -91,7 +79,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Location / CTA */}
             <div className="md:col-span-3">
               <p className="text-[10px] uppercase tracking-[0.4em] text-white/20 font-mono mb-8">Location</p>
               <div className="rounded-2xl overflow-hidden border border-white/5 opacity-80 hover:opacity-100 transition-opacity duration-500 grayscale brightness-75 hover:grayscale-0 hover:brightness-100">
