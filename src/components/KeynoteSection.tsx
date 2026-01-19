@@ -24,17 +24,17 @@ const speakers = [
 
 const KeynoteSection = () => {
   return (
-    <section id="keynotes" className="py-32 px-6 bg-[#050505]">
+    <section id="keynotes" className="py-32 px-6 bg-gray-50">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
           <div className="max-w-xl">
             <h2 className="text-4xl md:text-6xl font-bold tracking-tighter mb-6">KEYNOTE DISCOURSE</h2>
-            <p className="text-white/40 text-lg">
+            <p className="text-slate-600 text-lg">
               SYNTACS will feature world-renowned speakers exploring the frontiers of 
               computational intelligence and emerging technologies.
             </p>
           </div>
-          <div className="h-[2px] flex-grow bg-white/5 mx-12 hidden md:block" />
+          <div className="h-[2px] flex-grow bg-slate-200 mx-12 hidden md:block" />
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
@@ -46,27 +46,27 @@ const KeynoteSection = () => {
               transition={{ delay: index * 0.2, duration: 0.8 }}
               className="group relative"
             >
-              <div className="absolute inset-0 bg-white/[0.02] border border-white/10 rounded-[2rem] transition-all duration-500 group-hover:bg-white/[0.04] group-hover:border-white/20" />
+              <div className="absolute inset-0 bg-white border border-slate-200 rounded-[2rem] transition-all duration-500 group-hover:bg-slate-50 group-hover:border-slate-300 shadow-sm" />
               <div className="relative p-7 sm:p-10 flex flex-col h-full min-h-[300px] sm:min-h-[350px] justify-between">
                 <div>
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white/5 rounded-2xl flex items-center justify-center mb-6 sm:mb-8 border border-white/10 group-hover:bg-white/10 transition-colors">
-                    <speaker.icon size={22} className="text-white/60" />
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-slate-100 rounded-2xl flex items-center justify-center mb-6 sm:mb-8 border border-slate-200 group-hover:bg-slate-200 transition-colors">
+                    <speaker.icon size={22} className="text-slate-600" />
                   </div>
-                  <h3 className="text-2xl sm:text-3xl font-bold tracking-tight mb-2 group-hover:text-white transition-colors capitalize italic">
+                  <h3 className="text-2xl sm:text-3xl font-bold tracking-tight mb-2 text-slate-900 group-hover:text-slate-950 transition-colors capitalize italic">
                     {speaker.name}
                   </h3>
-                  <p className="text-white/60 text-base sm:text-lg font-medium">{speaker.role}</p>
-                  <p className="text-white/30 text-sm sm:text-base">{speaker.org}</p>
+                  <p className="text-slate-600 text-base sm:text-lg font-medium">{speaker.role}</p>
+                  <p className="text-slate-500 text-sm sm:text-base">{speaker.org}</p>
                 </div>
 
                 <div className="mt-6 sm:mt-8">
-                  <span className="text-[10px] sm:text-sm uppercase tracking-widest font-mono text-white/20">
+                  <span className="text-[10px] sm:text-sm uppercase tracking-widest font-mono text-slate-400">
                     Selection In Progress...
                   </span>
                 </div>
 
                 {/* Decorative Element */}
-                <div className="absolute bottom-8 right-8 sm:bottom-12 sm:right-12 opacity-[0.03] group-hover:opacity-10 transition-opacity duration-500 text-white pointer-events-none">
+                <div className="absolute bottom-8 right-8 sm:bottom-12 sm:right-12 opacity-[0.03] group-hover:opacity-10 transition-opacity duration-500 text-slate-900 pointer-events-none">
                   <speaker.icon size={120} strokeWidth={0.5} className="sm:w-40 sm:h-40" />
                 </div>
               </div>

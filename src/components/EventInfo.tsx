@@ -32,7 +32,7 @@ const infoCards = [
 
 const EventInfo = () => {
   return (
-    <section id="info" className="py-32 px-6 border-t border-white/5">
+    <section id="info" className="py-32 px-6 border-t border-slate-200">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-3 gap-12 mb-36">
           {infoCards.map((card, index) => (
@@ -41,15 +41,15 @@ const EventInfo = () => {
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ delay: index * 0.1, duration: 0.6 }}
-              className="flex flex-col gap-8 p-10 rounded-[2.5rem] bg-white/[0.02] border border-white/5 hover:border-white/10 transition-colors"
+              className="flex flex-col gap-8 p-10 rounded-[2.5rem] bg-white border border-slate-200 hover:border-slate-300 transition-colors shadow-sm"
             >
-              <div className="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center text-white/60">
+              <div className="w-14 h-14 rounded-2xl bg-slate-100 flex items-center justify-center text-slate-600">
                 <card.icon size={28} />
               </div>
               <div>
-                <h3 className="text-[10px] font-mono tracking-[0.4em] uppercase text-white/20 mb-4">{card.title}</h3>
+                <h3 className="text-[10px] font-mono tracking-[0.4em] uppercase text-slate-400 mb-4">{card.title}</h3>
                 <p className="text-2xl font-bold tracking-tight mb-2">{card.content}</p>
-                <p className="text-white/40 text-sm">{card.subContent}</p>
+                <p className="text-slate-500 text-sm">{card.subContent}</p>
               </div>
               <a 
                 href={card.link}
@@ -73,7 +73,7 @@ const EventInfo = () => {
               Legacy of <br />
               Innovation.
             </h2>
-            <div className="space-y-8 text-white/50 text-xl leading-relaxed font-light font-sans">
+            <div className="space-y-8 text-slate-600 text-xl leading-relaxed font-light font-sans">
               <p>
                 Building upon the immense success of SYNTACS '25, the 2026 symposium 
                 is poised to redefine the landscape of computer science research 
@@ -86,7 +86,7 @@ const EventInfo = () => {
               </p>
             </div>
             
-            <div className="flex items-center gap-12 pt-10 border-t border-white/10 grayscale opacity-40">
+            <div className="flex items-center gap-12 pt-10 border-t border-slate-200 grayscale opacity-40">
               <div className="text-sm font-mono tracking-widest font-bold">IIT ROPAR</div>
               <div className="text-sm font-mono tracking-widest font-bold">CSE DEPARTMENT</div>
             </div>
@@ -95,35 +95,35 @@ const EventInfo = () => {
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            className="p-16 rounded-[4rem] bg-gradient-to-br from-white/[0.04] to-transparent border border-white/10 relative overflow-hidden group"
+            className="p-16 rounded-[4rem] bg-gradient-to-br from-slate-100 to-transparent border border-slate-200 relative overflow-hidden group shadow-sm"
           >
             <div className="relative z-10">
-              <span className="text-[10px] font-mono tracking-[0.5em] text-white/20 block mb-6 uppercase">Get in Touch</span>
+              <span className="text-[10px] font-mono tracking-[0.5em] text-slate-400 block mb-6 uppercase">Get in Touch</span>
               <h3 className="text-4xl font-bold mb-12 tracking-tight">Project Inquires.</h3>
               
               <div className="space-y-10">
                 <a href="mailto:cse.events@iitrpr.ac.in" className="flex items-center gap-6 group/link">
-                  <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center group-hover/link:bg-white/20 transition-all duration-500">
+                  <div className="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center group-hover/link:bg-slate-200 transition-all duration-500">
                     <Mail size={20} />
                   </div>
                   <div>
-                    <p className="text-[10px] text-white/20 uppercase font-mono tracking-widest mb-1">Symposium Events</p>
-                    <p className="text-lg text-white/70 group-hover/link:text-white transition-colors">cse.events@iitrpr.ac.in</p>
+                    <p className="text-[10px] text-slate-400 uppercase font-mono tracking-widest mb-1">Symposium Events</p>
+                    <p className="text-lg text-slate-600 group-hover/link:text-slate-900 transition-colors">cse.events@iitrpr.ac.in</p>
                   </div>
                 </a>
                 
                 <div className="pt-10">
-                   <p className="text-[10px] text-white/20 uppercase font-mono tracking-widest mb-6">Social Frontier</p>
+                   <p className="text-[10px] text-slate-400 uppercase font-mono tracking-widest mb-6">Social Frontier</p>
                    <div className="flex gap-8">
-                      <a href="#" className="text-sm text-white/40 hover:text-white transition-colors">LinkedIn</a>
-                      <a href="#" className="text-sm text-white/40 hover:text-white transition-colors">Twitter</a>
-                      <a href="#" className="text-sm text-white/40 hover:text-white transition-colors">Instagram</a>
+                      <a href="#" className="text-sm text-slate-600 hover:text-slate-900 transition-colors">LinkedIn</a>
+                      <a href="#" className="text-sm text-slate-600 hover:text-slate-900 transition-colors">Twitter</a>
+                      <a href="#" className="text-sm text-slate-600 hover:text-slate-900 transition-colors">Instagram</a>
                    </div>
                 </div>
               </div>
             </div>
             {/* Background Blur Effect */}
-            <div className="absolute -top-24 -right-24 w-80 h-80 bg-white/[0.03] blur-[120px] rounded-full group-hover:bg-white/10 transition-colors duration-1000" />
+            <div className="absolute -top-24 -right-24 w-80 h-80 bg-blue-500/[0.05] blur-[120px] rounded-full group-hover:bg-blue-500/10 transition-colors duration-1000" />
           </motion.div>
         </div>
       </div>
