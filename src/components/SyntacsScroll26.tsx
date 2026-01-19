@@ -115,7 +115,7 @@ const SyntacsScroll26 = () => {
           ref={canvasRef}
           width={canvasWidth}
           height={canvasHeight}
-          className="w-full h-full object-cover pointer-events-none opacity-40 md:opacity-50"
+          className="w-full h-full object-cover pointer-events-none opacity-100 md:opacity-100"
           suppressHydrationWarning
         />
 
@@ -126,12 +126,21 @@ const SyntacsScroll26 = () => {
             style={{ opacity: useTransform(smoothProgress, [0, 0.15], [1, 0]) }}
             className="absolute inset-0 flex items-center justify-center pointer-events-none"
           >
-            <div className="text-center transform translate-y-12 md:translate-y-0 pointer-events-auto">
-              <h1 className="text-7xl md:text-9xl font-bold tracking-tighter mb-4 text-slate-900">
+            <div className="text-center pointer-events-auto">
+              <h1 className="text-7xl md:text-9xl font-bold tracking-tighter text-slate-900">
                 2026
               </h1>
-              <p className="text-sm md:text-xl font-light tracking-[0.2em] md:tracking-[0.3em] uppercase text-slate-600 transform md:translate-y-9 mb-8 md:mb-16">
-                Department of Computer Science & Engineering, IIT Ropar · 20–21 March
+            </div>
+          </motion.div>
+
+          {/* Subtitle and Button - positioned lower */}
+          <motion.div 
+            style={{ opacity: useTransform(smoothProgress, [0, 0.15], [1, 0]) }}
+            className="absolute inset-0 flex items-end justify-center pb-32 md:pb-40 pointer-events-none"
+          >
+            <div className="text-center pointer-events-auto">
+              <p className="text-sm md:text-xl font-light tracking-[0.2em] md:tracking-[0.3em] uppercase text-slate-600 mb-8 md:mb-12">
+                Department of Computer Science & Engineering<br />IIT Ropar · 20–21 March
               </p>
               <motion.a
                 href="#welcome"
