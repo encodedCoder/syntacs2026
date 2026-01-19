@@ -66,7 +66,7 @@ export default function CallForPapersPage() {
               <MapPin className="text-white/40 mb-4" size={32} />
               <h3 className="text-xl font-bold mb-3">Venue</h3>
               <p className="text-white/60">
-                <strong>To be announced</strong>
+                <strong>CSE, IIT Ropar</strong>
               </p>
               <p className="text-white/40 text-sm mt-2">
                 IIT Ropar, Punjab, India
