@@ -55,7 +55,7 @@ const Navbar = () => {
                 <span className="text-black font-bold text-sm">S26</span>
               </motion.div>
               <span className="font-bold tracking-tighter text-xl sm:text-2xl text-white">
-                SYNTACS<span className="hidden min-[375px]:inline"> '26</span>
+                SYNTACS<span className="hidden min-[375px]:inline"></span>
               </span>
             </div>
 

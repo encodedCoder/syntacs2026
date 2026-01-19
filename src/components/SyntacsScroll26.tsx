@@ -157,7 +157,7 @@ const SyntacsScroll26 = () => {
               Precision <br className="hidden md:block" /> Research.
             </h2>
             <p className="text-base md:text-lg text-white/50 leading-relaxed font-light">
-              Dive into the core of technological innovation. SYNTACS '26 brings together the brightest minds to disassemble today's complex challenges and build tomorrow's solutions.
+              Dive into the core of technological innovation. SYNTACS brings together the brightest minds to disassemble today's complex challenges and build tomorrow's solutions.
             </p>
           </motion.div>
 

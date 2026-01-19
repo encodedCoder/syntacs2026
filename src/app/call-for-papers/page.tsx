@@ -46,18 +46,26 @@ export default function CallForPapersPage() {
             <div className="p-8 rounded-3xl bg-white/[0.02] border border-white/10">
               <Calendar className="text-white/40 mb-4" size={32} />
               <h3 className="text-xl font-bold mb-3">Dates</h3>
-              <ul className="space-y-2 text-white/60">
+              <ul className="space-y-4 text-white/60">
                 <li className="flex items-start gap-2">
                   <CheckCircle2 size={18} className="text-white/40 mt-1 shrink-0" />
-                  <span><strong>20–21 March 2026</strong></span>
+                  <span>Submission Deadline: <strong>16 Feb 2026</strong></span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 size={18} className="text-white/40 mt-1 shrink-0" />
-                  <span>Main Conference Day: <strong>21 March 2026</strong></span>
+                  <span>Acceptance Notification: <strong>2nd March 2026</strong></span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 size={18} className="text-white/40 mt-1 shrink-0" />
-                  <span>Interaction & Collaboration Day: <strong>20 March 2026</strong></span>
+                  <span>Camera Ready: <strong>9th March 2026</strong></span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 size={18} className="text-white/40 mt-1 shrink-0" />
+                  <span>Early Bird Registration: <strong>9th March 2026</strong></span>
+                </li>
+                <li className="flex items-start gap-2 pt-2 border-t border-white/10">
+                  <CheckCircle2 size={18} className="text-white/40 mt-1 shrink-0" />
+                  <span>Conference Dates: <strong>20–21 March 2026</strong></span>
                 </li>
               </ul>
             </div>
@@ -458,7 +466,7 @@ export default function CallForPapersPage() {
                 <div className="w-10 h-10 bg-white flex items-center justify-center rounded-xl">
                   <span className="text-black font-black text-sm">S26</span>
                 </div>
-                <span className="font-bold tracking-tighter text-2xl text-white/90">SYNTACS '26</span>
+                <span className="font-bold tracking-tighter text-2xl text-white/90">SYNTACS</span>
               </div>
               <p className="text-white/40 text-sm leading-relaxed font-light mb-8 max-w-sm">
                 The Symposium on Novel Technologies and Advances in Computer Science returns 

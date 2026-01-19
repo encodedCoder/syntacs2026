@@ -25,7 +25,7 @@ const KeynotePreview = () => {
           <div className="max-w-xl">
             <h2 className="text-4xl md:text-6xl font-bold tracking-tighter mb-6">KEYNOTE DISCOURSE</h2>
             <p className="text-white/40 text-lg">
-              SYNTACS '26 will feature world-renowned speakers exploring the frontiers of 
+              SYNTACS will feature world-renowned speakers exploring the frontiers of 
               computational intelligence and emerging technologies.
             </p>
           </div>
