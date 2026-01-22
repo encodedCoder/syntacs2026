@@ -4,6 +4,7 @@ import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion"
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
+import CallForPapersButton from "./CallForPapersButton";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -75,12 +76,7 @@ const Navbar = () => {
               ))}
             </div>
             
-            <Link 
-              href="/call-for-papers"
-              className="px-5 py-2 sm:px-8 sm:py-2.5 bg-slate-900 text-white text-xs sm:text-base font-bold rounded-full hover:bg-slate-800 hover:scale-105 transition-all duration-300 shadow-lg"
-            >
-              Call for Papers
-            </Link>
+            <CallForPapersButton />
 
             {/* Mobile Menu Toggle */}
             <button 

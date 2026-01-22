@@ -55,7 +55,11 @@ export default function CommitteePage() {
             <div>
               <h2 className="text-3xl font-bold text-slate-900 mb-8 border-b pb-4">Program Chair</h2>
               <div className="bg-slate-50 p-6 rounded-2xl">
-                <h3 className="text-xl font-bold text-slate-900">Shreya Bansal</h3>
+                <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-8">
+                  <h3 className="text-xl font-bold text-slate-900">Shreya Bansal</h3>
+                  <div className="hidden md:block w-px h-6 bg-slate-300"></div>
+                  <h3 className="text-xl font-bold text-slate-900">Lownish Rai Sookha</h3>
+                </div>
               </div>
             </div>
           </div>

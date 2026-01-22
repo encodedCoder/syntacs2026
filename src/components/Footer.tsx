@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Youtube, Twitter, Instagram, Linkedin, MapPin, Mail } from "lucide-react";
+import CallForPapersButton from "./CallForPapersButton";
 
 const Footer = () => {
   return (
@@ -37,6 +38,10 @@ const Footer = () => {
                   {social.icon}
                 </a>
               ))}
+            </div>
+            
+            <div className="mt-8">
+              <CallForPapersButton />
             </div>
           </div>
 

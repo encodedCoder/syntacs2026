@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { useScroll, useTransform, motion, useSpring } from "framer-motion";
+import CallForPapersButton from "./CallForPapersButton";
 
 const TOTAL_FRAMES = 120;
 const CANVAS_WIDTH = 1920;
@@ -142,15 +143,13 @@ const SyntacsScroll26 = () => {
               <p className="text-sm md:text-xl font-light tracking-[0.2em] md:tracking-[0.3em] uppercase text-slate-600 mb-8 md:mb-12">
                 Department of Computer Science & Engineering<br />IIT Ropar · 20–21 March
               </p>
-              <motion.a
-                href="#welcome"
+              <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5, duration: 0.8 }}
-                className="inline-block px-8 py-3 md:px-10 md:py-4 animate-gradient-border text-slate-900 text-xs md:text-sm font-medium tracking-[0.2em] uppercase rounded-full transition-all duration-300 shadow-lg"
               >
-                Call for Papers
-              </motion.a>
+                <CallForPapersButton />
+              </motion.div>
             </div>
           </motion.div>
 
@@ -189,18 +188,15 @@ const SyntacsScroll26 = () => {
           {/* 90% Scroll */}
           <motion.div 
             style={{ opacity: useTransform(smoothProgress, [0.85, 0.95], [0, 1]) }}
-            className="absolute inset-0 flex flex-col items-center justify-center"
+            className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none"
           >
-            <div className="text-center px-4">
-              <h2 className="text-4xl md:text-8xl font-bold tracking-tighter mb-6 md:mb-8 text-slate-900">20-21 MARCH 2026</h2>
+            <div className="text-center px-4 pt-24 pointer-events-auto">
+              <h2 className="text-4xl md:text-8xl font-bold tracking-tighter mb-6 md:mb-8 text-slate-900">20-21 MARCH</h2>
+              <p className="text-sm md:text-xl font-light tracking-[0.2em] md:tracking-[0.3em] uppercase text-slate-600 mb-4">
+                Department of Computer Science & Engineering
+              </p>
               <p className="text-sm md:text-xl text-slate-500 font-mono tracking-widest uppercase mb-10 md:mb-12">IIT Ropar | Punjab, India</p>
-              <a 
-                href="https://www.syntacs2025.site/register"
-                target="_blank"
-                className="px-10 py-4 md:px-16 md:py-5 bg-slate-900 text-white text-sm md:text-lg font-bold rounded-full hover:bg-slate-800 hover:scale-105 transition-all duration-300 inline-block shadow-lg"
-              >
-                JOIN THE FRONTIER
-              </a>
+              <CallForPapersButton />
             </div>
           </motion.div>
         </div>

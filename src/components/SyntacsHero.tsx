@@ -2,6 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import CallForPapersButton from "./CallForPapersButton";
 
 const SyntacsHero = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -57,6 +58,15 @@ const SyntacsHero = () => {
           Symposium on Novel Technologies and Advances in Computer Science.
           A Research Scholars Day focused on innovation and collaboration.
         </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.8, duration: 1 }}
+          className="mt-10 flex justify-center"
+        >
+          <CallForPapersButton />
+        </motion.div>
       </motion.div>
 
       {/* Scroll Indicator */}
