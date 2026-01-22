@@ -62,9 +62,9 @@ const Footer = () => {
             
             <p className="text-[10px] uppercase tracking-[0.4em] text-black font-mono mb-8 mt-12">Official</p>
             <ul className="space-y-4">
-              <li><a href="https://www.iitropar.ac.in/" target="_blank" rel="noopener noreferrer" className="text-sm text-black hover:text-slate-900 transition-colors">IIT Ropar</a></li>
-              <li><a href="https://cse.iitropar.ac.in/" target="_blank" rel="noopener noreferrer" className="text-sm text-black hover:text-slate-900 transition-colors">CSE Department</a></li>
-              <li><a href="https://syntacs.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-sm text-black hover:text-slate-900 transition-colors">SYNTACS '25</a></li>
+              <li><a href="https://www.iitrpr.ac.in/" target="_blank" rel="noopener noreferrer" className="text-sm text-black hover:text-slate-900 transition-colors">IIT Ropar</a></li>
+              <li><a href="https://cse.iitrpr.ac.in/" target="_blank" rel="noopener noreferrer" className="text-sm text-black hover:text-slate-900 transition-colors">CSE Department</a></li>
+              <li><a href="https://syntacs2025.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-sm text-black hover:text-slate-900 transition-colors">SYNTACS '25</a></li>
             </ul>
           </div>
 
@@ -81,6 +81,14 @@ const Footer = () => {
               <div className="flex gap-4 items-center">
                 <Mail size={18} className="text-black shrink-0" />
                 <a href="mailto:cseoffice@iitrpr.ac.in" className="text-sm text-black hover:text-slate-900 transition-colors">cseoffice@iitrpr.ac.in</a>
+              </div>
+              <div className="flex gap-4 items-center">
+                <Mail size={18} className="text-black shrink-0" />
+                <a href="mailto:cse.events@iitrpr.ac.in" className="text-sm text-black hover:text-slate-900 transition-colors">cse.events@iitrpr.ac.in</a>
+              </div>
+              <div className="flex gap-4 items-center">
+                <Mail size={18} className="text-black shrink-0" />
+                <a href="mailto:office-cse-1@iitrpr.ac.in" className="text-sm text-black hover:text-slate-900 transition-colors">office-cse-1@iitrpr.ac.in</a>
               </div>
             </div>
           </div>

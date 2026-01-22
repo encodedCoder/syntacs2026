@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MapPin, Calendar, FileText, Mail, ArrowUpRight } from "lucide-react";
+import { MapPin, Calendar, FileText, Mail, ArrowUpRight, Youtube, Twitter, Instagram, Linkedin } from "lucide-react";
 
 const infoCards = [
   {
@@ -19,14 +19,6 @@ const infoCards = [
     icon: Calendar,
     btn: "Add to Calendar",
     link: "#",
-  },
-  {
-    title: "Registration",
-    content: "Available Soon",
-    subContent: "Join the waitlist",
-    icon: FileText,
-    btn: "Notify Me",
-    link: "mailto:cse.events@iitrpr.ac.in",
   }
 ];
 
@@ -114,10 +106,23 @@ const EventInfo = () => {
                 
                 <div className="pt-10">
                    <p className="text-[10px] text-slate-400 uppercase font-mono tracking-widest mb-6">Social Frontier</p>
-                   <div className="flex gap-8">
-                      <a href="#" className="text-sm text-slate-600 hover:text-slate-900 transition-colors">LinkedIn</a>
-                      <a href="#" className="text-sm text-slate-600 hover:text-slate-900 transition-colors">Twitter</a>
-                      <a href="#" className="text-sm text-slate-600 hover:text-slate-900 transition-colors">Instagram</a>
+                   <div className="flex gap-4">
+                      {[
+                        { icon: <Youtube size={18} />, href: "https://www.youtube.com/@cseiitrpr" },
+                        { icon: <Twitter size={18} />, href: "https://x.com/cseiitrpr" },
+                        { icon: <Instagram size={18} />, href: "https://www.instagram.com/cseiitropar" },
+                        { icon: <Linkedin size={18} />, href: "https://www.linkedin.com/in/cseiitrpr/" }
+                      ].map((social, i) => (
+                        <a 
+                          key={i}
+                          href={social.href} 
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-10 h-10 rounded-full border border-slate-300 flex items-center justify-center text-slate-600 hover:text-slate-900 hover:border-slate-400 hover:bg-slate-100 transition-all duration-300"
+                        >
+                          {social.icon}
+                        </a>
+                      ))}
                    </div>
                 </div>
               </div>
