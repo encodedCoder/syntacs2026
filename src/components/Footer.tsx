@@ -59,6 +59,13 @@ const Footer = () => {
               <li><Link href="/program" className="text-sm text-black hover:text-slate-900 transition-colors">Program</Link></li>
               <li><Link href="/venue" className="text-sm text-black hover:text-slate-900 transition-colors">Venue</Link></li>
             </ul>
+            
+            <p className="text-[10px] uppercase tracking-[0.4em] text-black font-mono mb-8 mt-12">Official</p>
+            <ul className="space-y-4">
+              <li><a href="https://www.iitropar.ac.in/" target="_blank" rel="noopener noreferrer" className="text-sm text-black hover:text-slate-900 transition-colors">IIT Ropar</a></li>
+              <li><a href="https://cse.iitropar.ac.in/" target="_blank" rel="noopener noreferrer" className="text-sm text-black hover:text-slate-900 transition-colors">CSE Department</a></li>
+              <li><a href="https://syntacs.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-sm text-black hover:text-slate-900 transition-colors">SYNTACS '25</a></li>
+            </ul>
           </div>
 
           {/* Contact Details */}
