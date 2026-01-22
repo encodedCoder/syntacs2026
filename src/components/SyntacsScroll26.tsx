@@ -147,9 +147,9 @@ const SyntacsScroll26 = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5, duration: 0.8 }}
-                className="inline-block px-8 py-3 md:px-10 md:py-4 border border-slate-300 hover:border-slate-900 bg-white hover:bg-slate-50 text-slate-900 text-xs md:text-sm font-medium tracking-[0.2em] uppercase rounded-full transition-all duration-300 backdrop-blur-sm shadow-lg"
+                className="inline-block px-8 py-3 md:px-10 md:py-4 animate-gradient-border text-slate-900 text-xs md:text-sm font-medium tracking-[0.2em] uppercase rounded-full transition-all duration-300 shadow-lg"
               >
-                Learn More
+                Call for Papers
               </motion.a>
             </div>
           </motion.div>
