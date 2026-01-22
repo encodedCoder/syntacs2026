@@ -82,7 +82,9 @@ const SyntacsScroll26 = () => {
 
       if (img) {
         context.clearRect(0, 0, canvas.width, canvas.height);
-        const scale = Math.max(canvas.width / img.width, canvas.height / img.height);
+        const scale = isMobile 
+          ? canvas.width / img.width 
+          : Math.max(canvas.width / img.width, canvas.height / img.height);
         const x = (canvas.width / 2) - (img.width / 2) * scale;
         const y = (canvas.height / 2) - (img.height / 2) * scale;
         context.drawImage(img, x, y, img.width * scale, img.height * scale);
