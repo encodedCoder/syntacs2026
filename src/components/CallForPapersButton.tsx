@@ -16,7 +16,7 @@ const CallForPapersButton = ({ className = "" }: CallForPapersButtonProps) => {
         whileTap={{ scale: 0.95 }}
         className={`inline-block px-8 py-3 md:px-10 md:py-4 animate-gradient-border text-slate-900 text-xs md:text-sm font-medium tracking-[0.2em] uppercase rounded-full transition-all duration-300 shadow-lg flex items-center gap-2 ${className}`}
       >
-        <span className="relative z-10">Call for Posters</span>
+        <span className="relative z-10">Call for Papers</span>
       </motion.button>
     </Link>
   );
