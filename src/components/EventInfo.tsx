@@ -99,7 +99,7 @@ const EventInfo = () => {
           >
             <div className="relative z-10">
               <span className="text-[10px] font-mono tracking-[0.5em] text-slate-400 block mb-6 uppercase">Get in Touch</span>
-              <h3 className="text-4xl font-bold mb-12 tracking-tight">Project Inquires.</h3>
+              <h3 className="text-4xl font-bold mb-12 tracking-tight">Event Inquires.</h3>
               
               <div className="space-y-10">
                 <a href="mailto:cse.events@iitrpr.ac.in" className="flex items-center gap-6 group/link">
