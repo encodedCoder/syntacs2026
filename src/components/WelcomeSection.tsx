@@ -2,6 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import CallForPapersButton from "./CallForPapersButton";
 
 const WelcomeSection = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -100,6 +101,17 @@ const WelcomeSection = () => {
               >
                 Organized by CSE IIT Ropar, <span className="text-slate-900 font-medium">SYNTACS</span> will feature insightful talks by two prominent speakers, providing attendees with valuable insights into cutting-edge research and industry trends. The event will also include engaging poster sessions and demo sessions, offering scholars an opportunity to showcase their work and receive constructive feedback. We extend a warm invitation to all researchers to join us in this enriching experience, broaden your professional network, and make the most of <span className="text-slate-900 font-medium">SYNTACS</span> - a day full of learning and collaborative opportunities.
               </motion.p>
+
+              {/* Action Button */}
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+                className="flex justify-center"
+              >
+                <CallForPapersButton />
+              </motion.div>
             </div>
 
             {/* Tech Corner Decor */}
