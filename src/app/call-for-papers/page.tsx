@@ -3,7 +3,7 @@
 import Navbar from "@/components/Navbar";
 import PageHero from "@/components/PageHero";
 import { motion } from "framer-motion";
-import { Calendar, MapPin, Users, FileText, Award, Video, ExternalLink, CheckCircle2 } from "lucide-react";
+import { Calendar, MapPin, Users, FileText, Award, Video, ExternalLink, CheckCircle2, Download } from "lucide-react";
 import Footer from "@/components/Footer";
 
 export default function CallForPapersPage() {
@@ -136,6 +136,10 @@ export default function CallForPapersPage() {
                   <span className="text-slate-500 mt-1">•</span>
                   <span><strong>Language:</strong> English</span>
                 </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-slate-500 mt-1">•</span>
+                  <span><strong>Samples:</strong> View <a href="/static/poster_samples/Poster_Sample_PowerPoint.pdf" target="_blank" rel="noopener noreferrer" className="text-slate-900 underline underline-offset-2 hover:text-blue-600 transition-colors">PowerPoint</a> and <a href="/static/poster_samples/Poster_Sample_Overleaf.pdf" target="_blank" rel="noopener noreferrer" className="text-slate-900 underline underline-offset-2 hover:text-blue-600 transition-colors">LaTeX</a> samples</span>
+                </li>
               </ul>
             </div>
 
@@ -153,10 +157,46 @@ export default function CallForPapersPage() {
               <p className="text-slate-600 mb-4">
                 Participants creating fresh posters must use the official templates to maintain quality.
               </p>
-              <p className="text-slate-500 text-sm mb-3">Templates will be provided in:</p>
+              <p className="text-slate-500 text-sm mb-3">Download official templates:</p>
               <div className="flex flex-wrap gap-3">
-                <span className="px-4 py-2 rounded-full bg-slate-100 border border-slate-200 text-sm text-slate-700">PowerPoint</span>
-                <span className="px-4 py-2 rounded-full bg-slate-100 border border-slate-200 text-sm text-slate-700">Overleaf (LaTeX)</span>
+                <a 
+                  href="/static/poster_templates/PosterA0_Syntacs26_template_Powerpoint.pptx" 
+                  download 
+                  className="px-4 py-2 rounded-full bg-slate-100 border border-slate-200 text-sm text-slate-700 hover:bg-slate-200 hover:border-slate-300 transition-colors flex items-center gap-2"
+                >
+                  <span>PowerPoint</span>
+                  <Download size={14} />
+                </a>
+                <a 
+                  href="/static/poster_templates/PosterA0_Syntacs26_template_LaTex.zip" 
+                  download 
+                  className="px-4 py-2 rounded-full bg-slate-100 border border-slate-200 text-sm text-slate-700 hover:bg-slate-200 hover:border-slate-300 transition-colors flex items-center gap-2"
+                >
+                  <span>LaTeX (Zip)</span>
+                  <Download size={14} />
+                </a>
+              </div>
+
+              <p className="text-slate-500 text-sm mb-3 mt-6">View filled samples (PDF):</p>
+              <div className="flex flex-wrap gap-3">
+                <a 
+                  href="/static/poster_samples/Poster_Sample_PowerPoint.pdf" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 rounded-full bg-slate-50 border border-slate-200 text-sm text-slate-700 hover:bg-slate-100 hover:border-slate-300 transition-colors flex items-center gap-2"
+                >
+                  <span>Sample (PPT)</span>
+                  <ExternalLink size={14} />
+                </a>
+                <a 
+                  href="/static/poster_samples/Poster_Sample_Overleaf.pdf" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 rounded-full bg-slate-50 border border-slate-200 text-sm text-slate-700 hover:bg-slate-100 hover:border-slate-300 transition-colors flex items-center gap-2"
+                >
+                  <span>Sample (LaTeX)</span>
+                  <ExternalLink size={14} />
+                </a>
               </div>
             </div>
           </div>
@@ -310,7 +350,7 @@ export default function CallForPapersPage() {
               </li>
               <li className="flex items-start gap-3">
                 <CheckCircle2 size={20} className="text-slate-500 mt-1 shrink-0" />
-                <span>New posters must follow the official templates provided (<strong className="text-slate-900">PowerPoint / Overleaf</strong>)</span>
+                <span>New posters must follow the official templates (<strong className="text-slate-900">downloadable above</strong>)</span>
               </li>
             </ul>
           </div>
@@ -450,6 +490,17 @@ export default function CallForPapersPage() {
               </ul>
             </div>
           </div>
+        </motion.section>
+
+        {/* CMT Acknowledgment */}
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          className="mb-12 pt-12 border-t border-slate-200"
+        >
+          <p className="text-slate-500 text-sm italic text-center leading-relaxed">
+            CMT ACKNOWLEDGMENT: The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.
+          </p>
         </motion.section>
 
       </div>

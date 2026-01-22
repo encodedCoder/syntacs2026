@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Youtube, Twitter, Instagram, Linkedin, MapPin, Mail } from "lucide-react";
 import CallForPapersButton from "./CallForPapersButton";
 
@@ -13,10 +14,14 @@ const Footer = () => {
           {/* Branding & Description */}
           <div className="md:col-span-4">
             <div className="flex items-center gap-3 mb-8">
-              <div className="w-10 h-10 bg-slate-900 flex items-center justify-center rounded-xl">
-                <span className="text-white font-black text-sm">S26</span>
-              </div>
-              <span className="font-bold tracking-tighter text-2xl text-slate-900">SYNTACS</span>
+              <Image 
+                src="/head-footer-logo.png" 
+                alt="SYNTACS Logo" 
+                width={150} 
+                height={50} 
+                className="h-10 w-auto object-contain"
+                priority
+              />
             </div>
             <p className="text-black text-sm leading-relaxed font-light mb-8 max-w-sm">
               The Symposium on Novel Technologies and Advances in Computer Science returns 

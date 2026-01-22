@@ -4,6 +4,7 @@ import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion"
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import CallForPapersButton from "./CallForPapersButton";
 
 const Navbar = () => {
@@ -52,13 +53,15 @@ const Navbar = () => {
             href="/" 
             className="group flex items-center gap-3"
           >
-            <div className="group-hover:scale-110 transition-transform flex items-center gap-2">
-              <motion.div className="w-8 h-8 bg-slate-900 flex items-center justify-center rounded-lg">
-                <span className="text-white font-bold text-sm">S26</span>
-              </motion.div>
-              <span className="font-bold tracking-tighter text-xl sm:text-2xl text-slate-900">
-                SYNTACS<span className="hidden min-[375px]:inline"></span>
-              </span>
+            <div className="group-hover:scale-105 transition-transform">
+              <Image 
+                src="/head-footer-logo.png" 
+                alt="SYNTACS Logo" 
+                width={150} 
+                height={50} 
+                className="h-10 w-auto object-contain"
+                priority
+              />
             </div>
 
           </Link>
