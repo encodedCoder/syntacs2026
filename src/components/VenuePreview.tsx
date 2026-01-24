@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MapPin, Calendar, FileText, ArrowUpRight, ArrowRight } from "lucide-react";
+import { MapPin, Calendar, ArrowUpRight, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 const infoCards = [
@@ -16,12 +16,6 @@ const infoCards = [
     content: "20-21 March 2026",
     subContent: "Save the Date",
     icon: Calendar,
-  },
-  {
-    title: "Registration",
-    content: "Available Soon",
-    subContent: "Join the waitlist",
-    icon: FileText,
   }
 ];
 
