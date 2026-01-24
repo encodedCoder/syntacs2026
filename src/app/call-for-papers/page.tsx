@@ -465,7 +465,9 @@ export default function CallForPapersPage() {
               <strong>Submission Platform:</strong> CMT
             </p>
             <a 
-              href="#" 
+              href="https://cmt3.research.microsoft.com/SYNTACS2026"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-slate-900 text-white font-bold hover:bg-slate-800 hover:scale-105 transition-all mb-8 shadow-lg"
             >
               <span>Submit Your Poster</span>
