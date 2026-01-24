@@ -9,7 +9,7 @@ export default function CommitteePage() {
   ];
 
   const facultyCoordination = [
-    "Punnet Goyal",
+    "Puneet Goyal",
     "Mukesh Saini",
     "Anil Shukla",
     "Jagpreet Singh",
