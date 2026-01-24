@@ -14,14 +14,16 @@ const Footer = () => {
           {/* Branding & Description */}
           <div className="md:col-span-4">
             <div className="flex items-center gap-3 mb-8">
-              <Image 
-                src="/head-footer-logo.png" 
-                alt="SYNTACS Logo" 
-                width={150} 
-                height={50} 
-                className="h-10 w-auto object-contain"
-                priority
-              />
+              <Link href="/" className="block">
+                <Image 
+                  src="/head-footer-logo.png" 
+                  alt="SYNTACS Logo" 
+                  width={150} 
+                  height={50} 
+                  className="h-10 w-auto object-contain"
+                  priority
+                />
+              </Link>
             </div>
             <p className="text-black text-sm leading-relaxed font-light mb-8 max-w-sm">
               The Symposium on Novel Technologies and Advances in Computer Science returns 
