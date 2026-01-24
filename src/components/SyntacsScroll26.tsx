@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { useScroll, useTransform, motion, useSpring } from "framer-motion";
+import Link from "next/link";
 import CallForPapersButton from "./CallForPapersButton";
 
 const TOTAL_FRAMES = 120;
@@ -145,13 +146,27 @@ const SyntacsScroll26 = () => {
               <p className="text-sm md:text-xl font-light tracking-[0.2em] md:tracking-[0.3em] uppercase text-slate-600 mb-8 md:mb-12">
                 Department of Computer Science & Engineering<br />IIT Ropar · 20–21 March
               </p>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.5, duration: 0.8 }}
-              >
-                <CallForPapersButton />
-              </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.5, duration: 0.8 }}
+                  className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6"
+                >
+                  <Link 
+                    href="#welcome"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      const element = document.getElementById('welcome');
+                      if (element) {
+                        element.scrollIntoView({ behavior: 'smooth' });
+                      }
+                    }}
+                    className="relative z-30 pointer-events-auto cursor-pointer inline-flex px-8 py-3 md:px-10 md:py-4 bg-slate-900 hover:bg-slate-800 text-white text-xs md:text-sm font-medium tracking-[0.2em] uppercase rounded-full transition-all duration-300 shadow-lg hover:shadow-xl items-center gap-2 border border-slate-800"
+                  >
+                    <span className="relative z-10">Learn More</span>
+                  </Link>
+                  <CallForPapersButton />
+                </motion.div>
             </div>
           </motion.div>
 
