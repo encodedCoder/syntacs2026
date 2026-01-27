@@ -377,13 +377,13 @@ export default function CallForPapersPage() {
           </div>
         </motion.section>
 
-        {/* Lightning Talks & Awards */}
+        {/* Special Opportunities */}
         <motion.section
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           className="mb-24"
         >
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-8 text-slate-900">Lightning Talks & Awards</h2>
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-8 text-slate-900">Special Opportunities</h2>
           <div className="p-8 rounded-3xl bg-white border border-slate-200 shadow-sm">
             <Award className="text-slate-600 mb-6" size={36} />
             <p className="text-slate-600 mb-6">
@@ -394,10 +394,7 @@ export default function CallForPapersPage() {
                 <span className="text-slate-500 mt-1">•</span>
                 <span><strong>Duration:</strong> 5–8 minutes</span>
               </li>
-              <li className="flex items-start gap-3">
-                <span className="text-slate-500 mt-1">•</span>
-                <span>Details will be communicated later</span>
-              </li>
+
             </ul>
             <div className="pt-6 border-t border-slate-200">
               <p className="text-slate-600">
