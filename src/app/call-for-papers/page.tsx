@@ -287,6 +287,56 @@ export default function CallForPapersPage() {
           </div>
         </motion.section>
 
+        {/* Selection Criteria */}
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          className="mb-24"
+        >
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-8 text-slate-900">Selection Criteria</h2>
+          <div className="p-8 rounded-3xl bg-white border border-slate-200 shadow-sm">
+            <p className="text-slate-600 mb-6 text-lg">
+              Poster submissions to SYNTACS 2026 will be reviewed by the organizing committee based on the following criteria:
+            </p>
+            <div className="space-y-6">
+              {[
+                {
+                  title: "Novelty and Originality",
+                  description: "The extent to which the poster presents new ideas, approaches, or perspectives, or offers meaningful extensions to existing work."
+                },
+                {
+                  title: "Relevance to SYNTACS 2026",
+                  description: "Alignment of the poster topic with the themes and focus areas of the conference."
+                },
+                {
+                  title: "Technical Soundness and Feasibility",
+                  description: "The clarity of the problem formulation, soundness of the methodology, and feasibility of the proposed or demonstrated approach."
+                },
+                {
+                  title: "Completeness and Clarity",
+                  description: "How clearly the objectives, methodology, and results (if available) are presented and how complete the work is at its current stage."
+                },
+                {
+                  title: "Potential to Stimulate Discussion",
+                  description: "The ability of the poster to encourage interaction, feedback, and meaningful discussion during the poster session."
+                },
+                {
+                  title: "Visual Quality and Organization",
+                  description: "Effectiveness of the poster layout, readability, and visual presentation in communicating the core ideas."
+                }
+              ].map((item, index) => (
+                <div key={index} className="flex gap-4">
+                  <div className="w-2 h-2 rounded-full bg-slate-400 mt-2.5 shrink-0" />
+                  <div>
+                    <h3 className="text-lg font-bold text-slate-900 mb-1">{item.title}</h3>
+                    <p className="text-slate-600 leading-relaxed">{item.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </motion.section>
+
         {/* Registration Fee */}
         <motion.section
           initial={{ opacity: 0, y: 20 }}
