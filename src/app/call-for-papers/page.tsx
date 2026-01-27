@@ -345,7 +345,10 @@ export default function CallForPapersPage() {
         >
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-8 text-slate-900">Registration Fee</h2>
           <div className="p-10 rounded-3xl bg-gradient-to-br from-slate-50 to-white border border-slate-200 shadow-sm">
-            <div className="text-5xl font-bold mb-6 text-slate-900">₹1500</div>
+            <div className="flex items-baseline gap-2 mb-6">
+              <span className="text-5xl font-bold text-slate-900">₹1500</span>
+              <span className="text-xl text-slate-500 font-medium">/ participant</span>
+            </div>
             <p className="text-slate-500 text-sm mb-8">(inclusive of GST)</p>
 
             <h3 className="text-xl font-bold mb-4 text-slate-900">Includes:</h3>
@@ -553,7 +556,7 @@ export default function CallForPapersPage() {
 
               <div className="pt-6 border-t border-slate-200">
                 <p className="text-slate-600 mb-2">
-                  <strong className="text-slate-900">Registration fee:</strong> ₹1500 (inclusive of GST)
+                  <strong className="text-slate-900">Registration fee:</strong> ₹1500 <span className="text-slate-500 font-normal">per participant</span> (inclusive of GST)
                 </p>
                 <p className="text-slate-500 text-sm">
                   <strong>Note:</strong> Accommodation is not included.
