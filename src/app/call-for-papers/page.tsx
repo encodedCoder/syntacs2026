@@ -10,8 +10,8 @@ export default function CallForPapersPage() {
   return (
     <main className="min-h-screen bg-white">
       <Navbar />
-      
-      <PageHero 
+
+      <PageHero
         title="CALL FOR POSTERS"
         subtitle="SYNTACS 2026"
         description="Present your research, share your ideas, and connect with the community at our vibrant poster session."
@@ -19,7 +19,7 @@ export default function CallForPapersPage() {
 
       {/* Main Content */}
       <div className="max-w-5xl mx-auto px-6 py-20">
-        
+
         {/* About Section */}
         <motion.section
           initial={{ opacity: 0, y: 20 }}
@@ -28,11 +28,57 @@ export default function CallForPapersPage() {
         >
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6 text-slate-900">About</h2>
           <p className="text-slate-600 text-lg leading-relaxed">
-            We invite students, researchers, and professionals to submit posters for SYNTACS 2026. 
-            The poster session provides a vibrant platform to present ideas, ongoing work, and completed 
+            We invite students, researchers, and professionals to submit posters for SYNTACS 2026.
+            The poster session provides a vibrant platform to present ideas, ongoing work, and completed
             research while fostering collaboration and networking.
           </p>
         </motion.section>
+
+        {/* Poster Areas (Themes) */}
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          className="mb-24"
+        >
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6 text-slate-900">Poster Areas (Themes)</h2>
+          <p className="text-slate-600 text-lg mb-8">
+            Submissions are invited in (but not limited to) the following four areas:
+          </p>
+          <div className="grid md:grid-cols-2 gap-6">
+            {[
+              {
+                title: "Strategic Intelligence & Theoretical Computer Science",
+                description: "Algorithms, complexity, graph theory, optimization, theoretical machine learning, federated and reinforcement learning, human–AI interaction, and fairness."
+              },
+              {
+                title: "Networks, Security & Distributed Systems",
+                description: "Computer and wireless networks, cybersecurity, cryptography, blockchain, distributed systems, IoT, edge computing, and cloud security."
+              },
+              {
+                title: "Visual Computing & Artificial Intelligence",
+                description: "Computer vision, image processing, deep learning, generative AI, multimedia, multimodal learning, medical imaging, remote sensing, natural language processing, and explainable AI."
+              },
+              {
+                title: "System Architecture & Infrastructure",
+                description: "Computer architecture, hardware security, hardware accelerators, high-performance and green computing, embedded systems, operating system, and edge accelerators."
+              },
+              {
+                title: "Computing Applications and Demonstrations",
+                description: ""
+              }
+            ].map((area, index) => (
+              <div key={index} className="p-8 rounded-3xl bg-white border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                <h3 className="text-xl font-bold mb-3 text-slate-900">{area.title}</h3>
+                {area.description && (
+                  <p className="text-slate-600 leading-relaxed">
+                    {area.description}
+                  </p>
+                )}
+              </div>
+            ))}
+          </div>
+        </motion.section>
+
 
         {/* Event Details */}
         <motion.section
@@ -115,7 +161,7 @@ export default function CallForPapersPage() {
           className="mb-24"
         >
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-8 text-slate-900">Poster Guidelines</h2>
-          
+
           <div className="space-y-8">
             {/* Format */}
             <div className="p-8 rounded-3xl bg-white border border-slate-200 shadow-sm">
@@ -159,17 +205,17 @@ export default function CallForPapersPage() {
               </p>
               <p className="text-slate-500 text-sm mb-3">Download official templates:</p>
               <div className="flex flex-wrap gap-3">
-                <a 
-                  href="/static/poster_templates/PosterA0_Syntacs26_template_Powerpoint.pptx" 
-                  download 
+                <a
+                  href="/static/poster_templates/PosterA0_Syntacs26_template_Powerpoint.pptx"
+                  download
                   className="px-4 py-2 rounded-full bg-slate-100 border border-slate-200 text-sm text-slate-700 hover:bg-slate-200 hover:border-slate-300 transition-colors flex items-center gap-2"
                 >
                   <span>PowerPoint</span>
                   <Download size={14} />
                 </a>
-                <a 
-                  href="/static/poster_templates/PosterA0_Syntacs26_template_LaTex.zip" 
-                  download 
+                <a
+                  href="/static/poster_templates/PosterA0_Syntacs26_template_LaTex.zip"
+                  download
                   className="px-4 py-2 rounded-full bg-slate-100 border border-slate-200 text-sm text-slate-700 hover:bg-slate-200 hover:border-slate-300 transition-colors flex items-center gap-2"
                 >
                   <span>LaTeX (Zip)</span>
@@ -179,8 +225,8 @@ export default function CallForPapersPage() {
 
               <p className="text-slate-500 text-sm mb-3 mt-6">View filled samples (PDF):</p>
               <div className="flex flex-wrap gap-3">
-                <a 
-                  href="/static/poster_samples/Poster_Sample_PowerPoint.pdf" 
+                <a
+                  href="/static/poster_samples/Poster_Sample_PowerPoint.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-4 py-2 rounded-full bg-slate-50 border border-slate-200 text-sm text-slate-700 hover:bg-slate-100 hover:border-slate-300 transition-colors flex items-center gap-2"
@@ -188,8 +234,8 @@ export default function CallForPapersPage() {
                   <span>Sample (PPT)</span>
                   <ExternalLink size={14} />
                 </a>
-                <a 
-                  href="/static/poster_samples/Poster_Sample_Overleaf.pdf" 
+                <a
+                  href="/static/poster_samples/Poster_Sample_Overleaf.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-4 py-2 rounded-full bg-slate-50 border border-slate-200 text-sm text-slate-700 hover:bg-slate-100 hover:border-slate-300 transition-colors flex items-center gap-2"
@@ -237,7 +283,7 @@ export default function CallForPapersPage() {
           <div className="p-10 rounded-3xl bg-gradient-to-br from-slate-50 to-white border border-slate-200 shadow-sm">
             <div className="text-5xl font-bold mb-6 text-slate-900">₹1500</div>
             <p className="text-slate-500 text-sm mb-8">(inclusive of GST)</p>
-            
+
             <h3 className="text-xl font-bold mb-4 text-slate-900">Includes:</h3>
             <ul className="space-y-3 text-slate-600">
               <li className="flex items-start gap-3">
@@ -257,7 +303,7 @@ export default function CallForPapersPage() {
                 <span>Lunch + High Tea on Main Event</span>
               </li>
             </ul>
-            
+
             <p className="text-slate-500 text-sm mt-6">
               <strong>Note:</strong> Accommodation is not included.
             </p>
@@ -392,7 +438,7 @@ export default function CallForPapersPage() {
                   </div>
                 </div>
               </div>
-              
+
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-slate-500 mt-2 shrink-0" />
@@ -425,7 +471,7 @@ export default function CallForPapersPage() {
             <p className="text-slate-600 mb-6">
               This is a <strong className="text-slate-900">physical poster presentation</strong>.
             </p>
-            
+
             <div className="space-y-6">
               <div>
                 <p className="text-slate-500 mb-4">Selected participants must:</p>
@@ -464,7 +510,7 @@ export default function CallForPapersPage() {
             <p className="text-slate-600 mb-6">
               <strong>Submission Platform:</strong> CMT
             </p>
-            <a 
+            <a
               href="https://cmt3.research.microsoft.com/SYNTACS2026"
               target="_blank"
               rel="noopener noreferrer"
@@ -473,7 +519,7 @@ export default function CallForPapersPage() {
               <span>Submit Your Poster</span>
               <ExternalLink size={18} />
             </a>
-            
+
             <div className="pt-8 border-t border-slate-200">
               <p className="text-slate-500 mb-4">You will be asked to upload:</p>
               <ul className="space-y-3 text-slate-600">
