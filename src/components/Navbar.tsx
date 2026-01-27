@@ -17,7 +17,7 @@ const Navbar = () => {
   useEffect(() => {
     return scrollY.on("change", (latest) => {
       setIsScrolled(latest > 50);
-      
+
       // Show/Hide logic: Show on scroll up, hide on scroll down (if not at top)
       if (latest < 50) {
         setIsVisible(true);
@@ -35,6 +35,7 @@ const Navbar = () => {
     { name: "Program", href: "/program" },
     { name: "Venue", href: "/venue" },
     { name: "Committee", href: "/committee" },
+    { name: "FAQ", href: "/faq" },
   ];
 
   return (
@@ -42,23 +43,23 @@ const Navbar = () => {
       <motion.nav
         animate={{ y: isVisible || isMobileMenuOpen ? 0 : -100 }}
         transition={{ duration: 0.3 }}
-        style={{ 
+        style={{
           backgroundColor: `rgba(255, 255, 255, ${isScrolled || isMobileMenuOpen ? 0.95 : 0})`,
           backdropFilter: `blur(${isScrolled || isMobileMenuOpen ? 12 : 0}px)`,
         }}
         className="fixed top-0 left-0 right-0 z-[100] px-6 py-6"
       >
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <Link 
-            href="/" 
+          <Link
+            href="/"
             className="group flex items-center gap-3"
           >
             <div className="group-hover:scale-105 transition-transform">
-              <Image 
-                src="/head-footer-logo.png" 
-                alt="SYNTACS Logo" 
-                width={150} 
-                height={50} 
+              <Image
+                src="/head-footer-logo.png"
+                alt="SYNTACS Logo"
+                width={150}
+                height={50}
                 className="h-10 w-auto object-contain"
                 priority
               />
@@ -69,20 +70,20 @@ const Navbar = () => {
           <div className="flex items-center gap-6 md:gap-12">
             <div className="hidden md:flex items-center gap-10">
               {navLinks.map((link) => (
-                <Link 
-                  key={link.name} 
-                  href={link.href} 
+                <Link
+                  key={link.name}
+                  href={link.href}
                   className="px-4 py-1.5 sm:px-8 sm:py-2.5 text-[10px] sm:text-sm font-medium rounded-full tracking-tight bg-slate-900 text-white hover:bg-slate-800 hover:scale-105 transition-all duration-300 shadow-lg"
                 >
                   {link.name}
                 </Link>
               ))}
             </div>
-            
+
             <CallForPapersButton />
 
             {/* Mobile Menu Toggle */}
-            <button 
+            <button
               className="md:hidden p-2 text-slate-600 hover:text-slate-900"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
@@ -119,8 +120,8 @@ const Navbar = () => {
                   </Link>
                 </motion.div>
               ))}
-              
-              <motion.div 
+
+              <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.5 }}
