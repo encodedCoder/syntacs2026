@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-import CallForPapersButton from "./CallForPapersButton";
+import CallForPostersButton from "./CallForPostersButton";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -80,7 +80,7 @@ const Navbar = () => {
               ))}
             </div>
 
-            <CallForPapersButton />
+            <CallForPostersButton />
 
             {/* Mobile Menu Toggle */}
             <button

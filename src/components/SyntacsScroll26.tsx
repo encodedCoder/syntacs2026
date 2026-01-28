@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useScroll, useTransform, motion, useSpring } from "framer-motion";
 import Link from "next/link";
-import CallForPapersButton from "./CallForPapersButton";
+import CallForPostersButton from "./CallForPostersButton";
 
 const TOTAL_FRAMES = 120;
 const CANVAS_WIDTH = 1920;
@@ -83,8 +83,8 @@ const SyntacsScroll26 = () => {
 
       if (img) {
         context.clearRect(0, 0, canvas.width, canvas.height);
-        const scale = isMobile 
-          ? canvas.width / img.width 
+        const scale = isMobile
+          ? canvas.width / img.width
           : Math.max(canvas.width / img.width, canvas.height / img.height);
         const x = (canvas.width / 2) - (img.width / 2) * scale;
         const y = (canvas.height / 2) - (img.height / 2) * scale;
@@ -93,7 +93,7 @@ const SyntacsScroll26 = () => {
     };
 
     const unsubscribe = frameIndex.on("change", render);
-    
+
     // Initial render call
     render();
 
@@ -114,7 +114,7 @@ const SyntacsScroll26 = () => {
             </p>
           </div>
         )}
-        
+
         <canvas
           ref={canvasRef}
           width={canvasWidth}
@@ -126,7 +126,7 @@ const SyntacsScroll26 = () => {
         {/* Text Overlays */}
         <div className="absolute inset-0 pointer-events-none px-6">
           {/* 0% Scroll */}
-          <motion.div 
+          <motion.div
             style={{ opacity: useTransform(smoothProgress, [0, 0.15], [1, 0]) }}
             className="absolute inset-0 flex items-center justify-center pointer-events-none"
           >
@@ -138,7 +138,7 @@ const SyntacsScroll26 = () => {
           </motion.div>
 
           {/* Subtitle and Button - positioned lower */}
-          <motion.div 
+          <motion.div
             style={{ opacity: useTransform(smoothProgress, [0, 0.15], [1, 0]) }}
             className="absolute inset-0 flex items-end justify-center pb-32 md:pb-40 pointer-events-none"
           >
@@ -146,33 +146,33 @@ const SyntacsScroll26 = () => {
               <p className="text-sm md:text-xl font-light tracking-[0.2em] md:tracking-[0.3em] uppercase text-slate-600 mb-8 md:mb-12">
                 Department of Computer Science & Engineering<br />IIT Ropar · 20–21 March
               </p>
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.5, duration: 0.8 }}
-                  className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6"
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5, duration: 0.8 }}
+                className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6"
+              >
+                <Link
+                  href="#welcome"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const element = document.getElementById('welcome');
+                    if (element) {
+                      element.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }}
+                  className="relative z-30 pointer-events-auto cursor-pointer inline-flex px-8 py-3 md:px-10 md:py-4 bg-slate-900 hover:bg-slate-800 text-white text-xs md:text-sm font-medium tracking-[0.2em] uppercase rounded-full transition-all duration-300 shadow-lg hover:shadow-xl items-center gap-2 border border-slate-800"
                 >
-                  <Link 
-                    href="#welcome"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      const element = document.getElementById('welcome');
-                      if (element) {
-                        element.scrollIntoView({ behavior: 'smooth' });
-                      }
-                    }}
-                    className="relative z-30 pointer-events-auto cursor-pointer inline-flex px-8 py-3 md:px-10 md:py-4 bg-slate-900 hover:bg-slate-800 text-white text-xs md:text-sm font-medium tracking-[0.2em] uppercase rounded-full transition-all duration-300 shadow-lg hover:shadow-xl items-center gap-2 border border-slate-800"
-                  >
-                    <span className="relative z-10">Learn More</span>
-                  </Link>
-                  <CallForPapersButton />
-                </motion.div>
+                  <span className="relative z-10">Learn More</span>
+                </Link>
+                <CallForPostersButton />
+              </motion.div>
             </div>
           </motion.div>
 
           {/* 30% Scroll */}
-          <motion.div 
-            style={{ 
+          <motion.div
+            style={{
               opacity: useTransform(smoothProgress, [0.2, 0.3, 0.4], [0, 1, 0]),
               x: useTransform(smoothProgress, [0.2, 0.3, 0.4], [30, 0, -30])
             }}
@@ -187,8 +187,8 @@ const SyntacsScroll26 = () => {
           </motion.div>
 
           {/* 60% Scroll */}
-          <motion.div 
-            style={{ 
+          <motion.div
+            style={{
               opacity: useTransform(smoothProgress, [0.5, 0.6, 0.7], [0, 1, 0]),
               x: useTransform(smoothProgress, [0.5, 0.6, 0.7], [-30, 0, 30])
             }}
@@ -203,7 +203,7 @@ const SyntacsScroll26 = () => {
           </motion.div>
 
           {/* 90% Scroll */}
-          <motion.div 
+          <motion.div
             style={{ opacity: useTransform(smoothProgress, [0.85, 0.95], [0, 1]) }}
             className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none"
           >
@@ -213,7 +213,7 @@ const SyntacsScroll26 = () => {
                 Department of Computer Science & Engineering
               </p>
               <p className="text-sm md:text-xl text-slate-500 font-mono tracking-widest uppercase mb-10 md:mb-12">IIT Ropar | Punjab, India</p>
-              <CallForPapersButton />
+              <CallForPostersButton />
             </div>
           </motion.div>
         </div>

@@ -4,22 +4,22 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 
-interface CallForPapersButtonProps {
+interface CallForPostersButtonProps {
   className?: string;
 }
 
-const CallForPapersButton = ({ className = "" }: CallForPapersButtonProps) => {
+const CallForPostersButton = ({ className = "" }: CallForPostersButtonProps) => {
   return (
-    <Link href="/call-for-papers">
+    <Link href="/call-for-posters">
       <motion.button
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         className={`inline-flex px-8 py-3 md:px-10 md:py-4 animate-gradient-border text-slate-900 text-xs md:text-sm font-medium tracking-[0.2em] uppercase rounded-full transition-all duration-300 shadow-lg items-center gap-2 ${className}`}
       >
-        <span className="relative z-10">Call for Papers</span>
+        <span className="relative z-10">Call for Posters</span>
       </motion.button>
     </Link>
   );
 };
 
-export default CallForPapersButton;
+export default CallForPostersButton;

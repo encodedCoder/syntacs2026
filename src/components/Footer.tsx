@@ -1,32 +1,32 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Youtube, Twitter, Instagram, Linkedin, MapPin, Mail } from "lucide-react";
-import CallForPapersButton from "./CallForPapersButton";
+import CallForPostersButton from "./CallForPostersButton";
 
 const Footer = () => {
   return (
     <footer className="py-24 border-t border-slate-200 bg-gray-50 relative overflow-hidden">
       {/* Background Decor */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent" />
-      
+
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-16 mb-24">
           {/* Branding & Description */}
           <div className="md:col-span-4">
             <div className="flex items-center gap-3 mb-8">
               <Link href="/" className="block">
-                <Image 
-                  src="/head-footer-logo.png" 
-                  alt="SYNTACS Logo" 
-                  width={150} 
-                  height={50} 
+                <Image
+                  src="/head-footer-logo.png"
+                  alt="SYNTACS Logo"
+                  width={150}
+                  height={50}
                   className="h-10 w-auto object-contain"
                   priority
                 />
               </Link>
             </div>
             <p className="text-black text-sm leading-relaxed font-light mb-8 max-w-sm">
-              The Symposium on Novel Technologies and Advances in Computer Science returns 
+              The Symposium on Novel Technologies and Advances in Computer Science returns
               to IIT Ropar for its most immersive edition yet. Join us for a journey through the frontier of computational research.
             </p>
             <div className="flex gap-4">
@@ -36,9 +36,9 @@ const Footer = () => {
                 { icon: <Instagram size={18} />, href: "https://www.instagram.com/cseiitropar" },
                 { icon: <Linkedin size={18} />, href: "https://www.linkedin.com/in/cseiitrpr/" }
               ].map((social, i) => (
-                <a 
+                <a
                   key={i}
-                  href={social.href} 
+                  href={social.href}
                   target="_blank"
                   className="w-10 h-10 rounded-full border border-slate-300 flex items-center justify-center text-slate-600 hover:text-slate-900 hover:border-slate-400 hover:bg-slate-100 transition-all duration-300"
                 >
@@ -46,9 +46,9 @@ const Footer = () => {
                 </a>
               ))}
             </div>
-            
+
             <div className="mt-8">
-              <CallForPapersButton />
+              <CallForPostersButton />
             </div>
           </div>
 
@@ -61,7 +61,7 @@ const Footer = () => {
               <li><Link href="/program" className="text-sm text-black hover:text-slate-900 transition-colors">Program</Link></li>
               <li><Link href="/venue" className="text-sm text-black hover:text-slate-900 transition-colors">Venue</Link></li>
             </ul>
-            
+
             <p className="text-[10px] uppercase tracking-[0.4em] text-black font-mono mb-8 mt-12">Official</p>
             <ul className="space-y-4">
               <li><a href="https://www.iitrpr.ac.in/" target="_blank" rel="noopener noreferrer" className="text-sm text-black hover:text-slate-900 transition-colors">IIT Ropar</a></li>
@@ -111,7 +111,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        
+
         <div className="pt-12 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-8">
           <p className="text-black text-sm font-mono tracking-widest uppercase">
             © 2026 INDIAN INSTITUTE OF TECHNOLOGY ROPAR. ALL RIGHTS RESERVED.

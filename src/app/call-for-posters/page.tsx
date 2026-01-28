@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { Calendar, MapPin, Users, FileText, Award, Video, ExternalLink, CheckCircle2, Download } from "lucide-react";
 import Footer from "@/components/Footer";
 
-export default function CallForPapersPage() {
+export default function CallForPostersPage() {
   return (
     <main className="min-h-screen bg-white">
       <Navbar />

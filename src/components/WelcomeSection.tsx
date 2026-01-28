@@ -2,7 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import CallForPapersButton from "./CallForPapersButton";
+import CallForPostersButton from "./CallForPostersButton";
 
 const WelcomeSection = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -16,23 +16,23 @@ const WelcomeSection = () => {
   const rotate = useTransform(scrollYProgress, [0, 1], [0, 10]);
 
   return (
-    <section 
+    <section
       ref={containerRef}
-      id="welcome" 
+      id="welcome"
       className="relative py-32 md:py-48 bg-white overflow-hidden"
     >
       {/* Background Aesthetic Elements */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-blue-500/5 rounded-full blur-[120px] -translate-y-1/2" />
         <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-purple-500/5 rounded-full blur-[100px] translate-y-1/2" />
-        
+
         {/* Subtle Grid */}
-        <div 
-          className="absolute inset-0 opacity-[0.03]" 
-          style={{ 
+        <div
+          className="absolute inset-0 opacity-[0.03]"
+          style={{
             backgroundImage: `linear-gradient(to right, rgb(15,23,42) 1px, transparent 1px), linear-gradient(to bottom, rgb(15,23,42) 1px, transparent 1px)`,
             backgroundSize: '40px 40px'
-          }} 
+          }}
         />
       </div>
 
@@ -80,7 +80,7 @@ const WelcomeSection = () => {
           >
             {/* Inner Glow */}
             <div className="absolute -top-24 -left-24 w-48 h-48 bg-blue-500/10 rounded-full blur-[60px] opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
-            
+
             <div className="grid gap-10 md:gap-14 relative z-10">
               <motion.p
                 initial={{ opacity: 0, x: -20 }}
@@ -110,7 +110,7 @@ const WelcomeSection = () => {
                 transition={{ duration: 0.8, delay: 0.6 }}
                 className="flex justify-center"
               >
-                <CallForPapersButton />
+                <CallForPostersButton />
               </motion.div>
             </div>
 

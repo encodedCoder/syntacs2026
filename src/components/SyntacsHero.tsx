@@ -2,7 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import CallForPapersButton from "./CallForPapersButton";
+import CallForPostersButton from "./CallForPostersButton";
 
 const SyntacsHero = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -23,7 +23,7 @@ const SyntacsHero = () => {
         <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-white/5 rounded-full blur-[100px] animate-pulse delay-1000" />
       </div>
 
-      <motion.div 
+      <motion.div
         style={{ y, opacity, scale }}
         className="relative z-10 text-center px-4"
       >
@@ -40,7 +40,7 @@ const SyntacsHero = () => {
           <div className="h-[1px] w-12 bg-white/20" />
         </motion.div>
 
-        <motion.h1 
+        <motion.h1
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
@@ -65,12 +65,12 @@ const SyntacsHero = () => {
           transition={{ delay: 0.8, duration: 1 }}
           className="mt-10 flex justify-center"
         >
-          <CallForPapersButton />
+          <CallForPostersButton />
         </motion.div>
       </motion.div>
 
       {/* Scroll Indicator */}
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5, duration: 1 }}
