@@ -89,18 +89,26 @@ const WelcomeSection = () => {
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className="text-slate-600 text-base md:text-xl leading-relaxed text-justify md:text-left font-light"
               >
-                IIT Ropar's Computer Science and Engineering department proudly introduces <span className="text-slate-900 font-medium">SYNTACS</span>, <span className="text-slate-900 font-medium italic underline decoration-slate-300 underline-offset-4">SY</span>mposium on <span className="text-slate-900 font-medium italic underline decoration-slate-300 underline-offset-4">N</span>ovel <span className="text-slate-900 font-medium italic underline decoration-slate-300 underline-offset-4">T</span>echnologies and <span className="text-slate-900 font-medium italic underline decoration-slate-300 underline-offset-4">A</span>dvances in <span className="text-slate-900 font-medium italic underline decoration-slate-300 underline-offset-4">C</span>omputer <span className="text-slate-900 font-medium italic underline decoration-slate-300 underline-offset-4">S</span>cience, a Regional Summit aimed at fostering collaboration and knowledge exchange within the academic community. This event serves as a platform to bring together research scholars from diverse backgrounds, creating an environment conducive to networking and collaboration.
+                IIT Ropar’s Department of Computer Science and Engineering presents <span className="text-slate-900 font-medium">SYNTACS</span> - <span className="text-slate-900 font-medium italic underline decoration-slate-300 underline-offset-4">SY</span>mposium on <span className="text-slate-900 font-medium italic underline decoration-slate-300 underline-offset-4">N</span>ovel <span className="text-slate-900 font-medium italic underline decoration-slate-300 underline-offset-4">T</span>echnologies and <span className="text-slate-900 font-medium italic underline decoration-slate-300 underline-offset-4">A</span>dvances in <span className="text-slate-900 font-medium italic underline decoration-slate-300 underline-offset-4">C</span>omputer <span className="text-slate-900 font-medium italic underline decoration-slate-300 underline-offset-4">S</span>cience, a regional summit dedicated to research interaction, idea exchange, and academic networking in computer science.
               </motion.p>
 
-              <motion.p
+              <motion.div
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                className="text-slate-600 text-base md:text-xl leading-relaxed text-justify md:text-left font-light border-l border-slate-200 pl-8 md:pl-12"
+                className="text-slate-600 text-base md:text-xl leading-relaxed text-justify md:text-left font-light border-l border-slate-200 pl-8 md:pl-12 space-y-6"
               >
-                Organized by CSE IIT Ropar, <span className="text-slate-900 font-medium">SYNTACS</span> will feature insightful talks by two prominent speakers, providing attendees with valuable insights into cutting-edge research and industry trends. The event will also include engaging poster sessions and demo sessions, offering scholars an opportunity to showcase their work and receive constructive feedback. We extend a warm invitation to all researchers to join us in this enriching experience, broaden your professional network, and make the most of <span className="text-slate-900 font-medium">SYNTACS</span> - a day full of learning and collaborative opportunities.
-              </motion.p>
+                <p>
+                  <span className="text-slate-900 font-medium">SYNTACS</span> aims to be the largest platform in Northern India to informally share and discuss research ideas in computer science. We would like to bring all academic institutes in Punjab, Haryana, Delhi, Chandigarh and Himalayan regions who are working on computer science related areas to showcase their research and demonstrations.
+                </p>
+                <p>
+                  The event features talks by two prominent speakers, providing attendees with valuable insights into cutting-edge research and industry trends. It will also include engaging poster and demo sessions that allow research scholars to present their work, receive feedback, and engage in meaningful discussions with peers and experts.
+                </p>
+                <p>
+                  We invite researchers to be part of <span className="text-slate-900 font-medium">SYNTACS</span> and experience a day focused on learning, interaction, and collaborative opportunities.
+                </p>
+              </motion.div>
 
               {/* Action Button */}
               <motion.div
