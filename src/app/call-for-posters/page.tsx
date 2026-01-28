@@ -184,66 +184,50 @@ export default function CallForPostersPage() {
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-slate-500 mt-1">•</span>
-                  <span><strong>Samples:</strong> View <a href="/static/poster_samples/Poster_Sample_PowerPoint.pdf" target="_blank" rel="noopener noreferrer" className="text-slate-900 underline underline-offset-2 hover:text-blue-600 transition-colors">PowerPoint</a> and <a href="/static/poster_samples/Poster_Sample_Overleaf.pdf" target="_blank" rel="noopener noreferrer" className="text-slate-900 underline underline-offset-2 hover:text-blue-600 transition-colors">LaTeX</a> samples</span>
+                  <span>
+                    <strong>Official Templates:</strong> Download{' '}
+                    <a
+                      href="/static/poster_templates/PosterA0_Syntacs26_template_Powerpoint.pptx"
+                      download
+                      className="text-slate-900 underline underline-offset-2 hover:text-blue-600 transition-colors"
+                    >
+                      PowerPoint
+                    </a>{' '}
+                    and{' '}
+                    <a
+                      href="/static/poster_templates/PosterA0_Syntacs26_template_LaTex.zip"
+                      download
+                      className="text-slate-900 underline underline-offset-2 hover:text-blue-600 transition-colors"
+                    >
+                      LaTeX
+                    </a>
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-slate-500 mt-1">•</span>
+                  <span>
+                    <strong>Samples:</strong> View{' '}
+                    <a
+                      href="/static/poster_samples/Poster_Sample_PowerPoint.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-slate-900 underline underline-offset-2 hover:text-blue-600 transition-colors"
+                    >
+                      PowerPoint
+                    </a>{' '}
+                    and{' '}
+                    <a
+                      href="/static/poster_samples/Poster_Sample_Overleaf.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-slate-900 underline underline-offset-2 hover:text-blue-600 transition-colors"
+                    >
+                      LaTeX
+                    </a>{' '}
+                    samples
+                  </span>
                 </li>
               </ul>
-            </div>
-
-            {/* Previously Presented Posters */}
-            <div className="p-8 rounded-3xl bg-white border border-slate-200 shadow-sm">
-              <h3 className="text-xl font-bold mb-4 text-slate-900">Previously Presented Posters</h3>
-              <p className="text-slate-600">
-                Posters already presented at any conference/workshop can be submitted.
-              </p>
-            </div>
-
-            {/* New Posters */}
-            <div className="p-8 rounded-3xl bg-white border border-slate-200 shadow-sm">
-              <h3 className="text-xl font-bold mb-4 text-slate-900">New Posters</h3>
-              <p className="text-slate-600 mb-4">
-                Participants creating fresh posters must use the official templates to maintain quality.
-              </p>
-              <p className="text-slate-500 text-sm mb-3">Download official templates:</p>
-              <div className="flex flex-wrap gap-3">
-                <a
-                  href="/static/poster_templates/PosterA0_Syntacs26_template_Powerpoint.pptx"
-                  download
-                  className="px-4 py-2 rounded-full bg-slate-100 border border-slate-200 text-sm text-slate-700 hover:bg-slate-200 hover:border-slate-300 transition-colors flex items-center gap-2"
-                >
-                  <span>PowerPoint</span>
-                  <Download size={14} />
-                </a>
-                <a
-                  href="/static/poster_templates/PosterA0_Syntacs26_template_LaTex.zip"
-                  download
-                  className="px-4 py-2 rounded-full bg-slate-100 border border-slate-200 text-sm text-slate-700 hover:bg-slate-200 hover:border-slate-300 transition-colors flex items-center gap-2"
-                >
-                  <span>LaTeX (Zip)</span>
-                  <Download size={14} />
-                </a>
-              </div>
-
-              <p className="text-slate-500 text-sm mb-3 mt-6">View filled samples (PDF):</p>
-              <div className="flex flex-wrap gap-3">
-                <a
-                  href="/static/poster_samples/Poster_Sample_PowerPoint.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-4 py-2 rounded-full bg-slate-50 border border-slate-200 text-sm text-slate-700 hover:bg-slate-100 hover:border-slate-300 transition-colors flex items-center gap-2"
-                >
-                  <span>Sample (PPT)</span>
-                  <ExternalLink size={14} />
-                </a>
-                <a
-                  href="/static/poster_samples/Poster_Sample_Overleaf.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-4 py-2 rounded-full bg-slate-50 border border-slate-200 text-sm text-slate-700 hover:bg-slate-100 hover:border-slate-300 transition-colors flex items-center gap-2"
-                >
-                  <span>Sample (LaTeX)</span>
-                  <ExternalLink size={14} />
-                </a>
-              </div>
             </div>
           </div>
         </motion.section>
