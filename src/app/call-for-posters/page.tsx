@@ -436,35 +436,7 @@ export default function CallForPostersPage() {
           </div>
         </motion.section>
 
-        {/* Instructions for Authors */}
-        <motion.section
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          className="mb-24"
-        >
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-8 text-slate-900">Instructions for Authors</h2>
-          <div className="p-10 rounded-3xl bg-gradient-to-br from-slate-50 to-white border border-slate-200 shadow-sm">
-            <h3 className="text-xl font-bold mb-6 text-slate-900">Track: Poster Presentation – SYNTACS 2026</h3>
-            <ul className="space-y-4 text-slate-600">
-              <li className="flex items-start gap-3">
-                <CheckCircle2 size={20} className="text-slate-500 mt-1 shrink-0" />
-                <span>Submit your poster in <strong className="text-slate-900">PDF format</strong></span>
-              </li>
-              <li className="flex items-start gap-3">
-                <CheckCircle2 size={20} className="text-slate-500 mt-1 shrink-0" />
-                <span>Poster size must be <strong className="text-slate-900">A0 (Portrait)</strong></span>
-              </li>
-              <li className="flex items-start gap-3">
-                <CheckCircle2 size={20} className="text-slate-500 mt-1 shrink-0" />
-                <span>Posters previously presented at other conferences are <strong className="text-slate-900">allowed</strong></span>
-              </li>
-              <li className="flex items-start gap-3">
-                <CheckCircle2 size={20} className="text-slate-500 mt-1 shrink-0" />
-                <span>New posters must follow the official templates (<strong className="text-slate-900">downloadable above</strong>)</span>
-              </li>
-            </ul>
-          </div>
-        </motion.section>
+
 
         {/* Required Information */}
         <motion.section
