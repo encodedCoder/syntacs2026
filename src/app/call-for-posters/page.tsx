@@ -524,44 +524,7 @@ export default function CallForPostersPage() {
           </div>
         </motion.section>
 
-        {/* Presentation & Registration Policy */}
-        <motion.section
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          className="mb-24"
-        >
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-8 text-slate-900">Presentation & Registration Policy</h2>
-          <div className="p-10 rounded-3xl bg-gradient-to-br from-slate-50 to-white border border-slate-200 shadow-sm">
-            <p className="text-slate-600 mb-6">
-              This is a <strong className="text-slate-900">physical poster presentation</strong>.
-            </p>
 
-            <div className="space-y-6">
-              <div>
-                <p className="text-slate-500 mb-4">Selected participants must:</p>
-                <ul className="space-y-3 text-slate-600">
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 size={20} className="text-slate-500 mt-1 shrink-0" />
-                    <span>Print and bring the poster themselves</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 size={20} className="text-slate-500 mt-1 shrink-0" />
-                    <span>Be present during the poster session</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="pt-6 border-t border-slate-200">
-                <p className="text-slate-600 mb-2">
-                  <strong className="text-slate-900">Registration fee:</strong> ₹1500 <span className="text-slate-500 font-normal">per participant</span> (inclusive of GST)
-                </p>
-                <p className="text-slate-500 text-sm">
-                  <strong>Note:</strong> Accommodation is not included.
-                </p>
-              </div>
-            </div>
-          </div>
-        </motion.section>
 
         {/* Submission */}
         <motion.section
