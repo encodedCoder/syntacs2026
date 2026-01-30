@@ -356,7 +356,7 @@ export default function CallForPostersPage() {
             </ul>
 
             <p className="text-slate-500 text-sm mt-6">
-              <strong>Note:</strong> Accommodation is not included.
+              <strong>Note:</strong> Accomodation is not provided. Kindly check the FAQs for the list of nearby hotels/hostels.
             </p>
           </div>
         </motion.section>
@@ -367,7 +367,7 @@ export default function CallForPostersPage() {
           whileInView={{ opacity: 1, y: 0 }}
           className="mb-24"
         >
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-8 text-slate-900">Special Opportunities</h2>
+          <h2 className="text-3xl md:texttthe he FAQs for the list of nearght mb-8 text-slate-900">Special Opportunities</h2>
           <div className="p-8 rounded-3xl bg-white border border-slate-200 shadow-sm">
             <Award className="text-slate-600 mb-6" size={36} />
             <p className="text-slate-600 mb-6">
