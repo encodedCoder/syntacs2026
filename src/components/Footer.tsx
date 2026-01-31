@@ -118,7 +118,8 @@ const Footer = () => {
           </p>
           <div className="flex items-center gap-6">
             <span className="text-black text-sm font-mono uppercase tracking-[0.2em]">
-              Designed by <a href="https://encodedcoder.com" target="_blank" className="text-black hover:text-slate-900 transition-colors font-bold">Suresh</a>
+              Designed by <a href="https://encodedcoder.com" target="_blank" className="text-black hover:text-slate-900 transition-colors font-bold">Suresh</a> | <a href="https://www.linkedin.com/in/kshitiz-raj-patel/" target="_blank" className="text-black hover:text-slate-900 transition-colors font-bold">Kshitiz</a>
+
             </span>
           </div>
         </div>
