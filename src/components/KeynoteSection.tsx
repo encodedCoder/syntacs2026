@@ -20,7 +20,7 @@ const KeynoteSection = () => {
 
         <div className="grid md:grid-cols-2 gap-8">
           {speakers.map((speaker, index) => (
-            <KeynoteCard key={index} speaker={speaker} index={index} />
+            <KeynoteCard key={index} speaker={speaker} index={index} showBio={true} />
           ))}
         </div>
       </div>
