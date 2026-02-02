@@ -48,15 +48,15 @@ export default function CallForPostersPage() {
             {[
               {
                 title: "Strategic Intelligence & Theoretical Computer Science",
-                description: "Algorithms, complexity, graph theory, optimization, theoretical machine learning, federated and reinforcement learning, human–AI interaction, and fairness."
+                description: "Algorithms, complexity, graph theory, game theory, optimization, theoretical machine learning, human–AI interaction, and fairness."
               },
               {
                 title: "Networks, Security & Distributed Systems",
                 description: "Computer and wireless networks, cybersecurity, cryptography, blockchain, distributed systems, IoT, edge computing, and cloud security."
               },
               {
-                title: "Visual Computing & Artificial Intelligence",
-                description: "Computer vision, image processing, deep learning, generative AI, multimedia, multimodal learning, medical imaging, remote sensing, natural language processing, and explainable AI."
+                title: "Machine Learning & Artificial Intelligence",
+                description: "Computer vision, image processing, deep learning, federated and reinforcement learning, generative AI, multimedia, multimodal learning, medical imaging, remote sensing, natural language processing, and explainable AI."
               },
               {
                 title: "System Architecture & Infrastructure",
