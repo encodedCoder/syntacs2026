@@ -20,9 +20,10 @@ interface KeynoteCardProps {
     speaker: Speaker;
     index: number;
     showBio?: boolean;
+    largeImage?: boolean;
 }
 
-const KeynoteCard = ({ speaker, index, showBio = false }: KeynoteCardProps) => {
+const KeynoteCard = ({ speaker, index, showBio = false, largeImage = false }: KeynoteCardProps) => {
     const [isExpanded, setIsExpanded] = useState(false);
 
     return (
@@ -37,7 +38,7 @@ const KeynoteCard = ({ speaker, index, showBio = false }: KeynoteCardProps) => {
                 <div className="flex flex-col gap-6">
                     <div className="flex items-start gap-6">
                         {/* Image or Icon Placeholder */}
-                        <div className="shrink-0 relative w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden bg-slate-100 border border-slate-200 group-hover:border-slate-300 transition-colors">
+                        <div className={`shrink-0 relative rounded-2xl overflow-hidden bg-slate-100 border border-slate-200 group-hover:border-slate-300 transition-colors ${largeImage ? 'w-32 h-32 sm:w-44 sm:h-44' : 'w-20 h-20 sm:w-24 sm:h-24'}`}>
                             {speaker.image ? (
                                 <Image
                                     src={speaker.image}
@@ -47,7 +48,7 @@ const KeynoteCard = ({ speaker, index, showBio = false }: KeynoteCardProps) => {
                                 />
                             ) : (
                                 <div className="w-full h-full flex items-center justify-center">
-                                    <speaker.icon size={32} className="text-slate-400" />
+                                    <speaker.icon size={largeImage ? 48 : 32} className="text-slate-400" />
                                 </div>
                             )}
                         </div>

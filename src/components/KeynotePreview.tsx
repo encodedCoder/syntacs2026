@@ -22,7 +22,7 @@ const KeynotePreview = () => {
 
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           {speakers.map((speaker, index) => (
-            <KeynoteCard key={index} speaker={speaker} index={index} />
+            <KeynoteCard key={index} speaker={speaker} index={index} largeImage={true} />
           ))}
         </div>
 
@@ -32,7 +32,7 @@ const KeynotePreview = () => {
             href="/keynotes"
             className="group inline-flex items-center gap-3 px-8 py-4 rounded-full bg-white border border-slate-200 hover:bg-slate-50 hover:border-slate-300 transition-all duration-300 shadow-sm"
           >
-            <span className="text-sm font-bold tracking-wide">View All Keynotes</span>
+            <span className="text-sm font-bold tracking-wide">Learn more about keynotes</span>
             <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>
