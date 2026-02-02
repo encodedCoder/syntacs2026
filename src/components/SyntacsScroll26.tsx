@@ -207,7 +207,7 @@ const SyntacsScroll26 = () => {
             style={{ opacity: useTransform(smoothProgress, [0.85, 0.95], [0, 1]) }}
             className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none"
           >
-            <div className="text-center px-4 pt-24 pointer-events-auto">
+            <div className="text-center px-4 pt-56 pointer-events-auto">
               <h2 className="text-4xl md:text-8xl font-bold tracking-tighter mb-6 md:mb-8 text-slate-900">20-21 MARCH</h2>
               <p className="text-sm md:text-xl font-light tracking-[0.2em] md:tracking-[0.3em] uppercase text-slate-600 mb-4">
                 Department of Computer Science & Engineering
