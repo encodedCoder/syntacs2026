@@ -1,6 +1,9 @@
+"use client";
+
 import { motion } from "framer-motion";
-import { ExternalLink, LucideIcon } from "lucide-react";
+import { ExternalLink, LucideIcon, ChevronDown, ChevronUp } from "lucide-react";
 import Image from "next/image";
+import { useState } from "react";
 
 interface Speaker {
     name: string;
@@ -20,6 +23,8 @@ interface KeynoteCardProps {
 }
 
 const KeynoteCard = ({ speaker, index, showBio = false }: KeynoteCardProps) => {
+    const [isExpanded, setIsExpanded] = useState(false);
+
     return (
         <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -59,11 +64,32 @@ const KeynoteCard = ({ speaker, index, showBio = false }: KeynoteCardProps) => {
                     {/* Bio Section */}
                     {showBio && speaker.bio && (
                         <div className="space-y-4 pt-2">
-                            {speaker.bio.map((paragraph, i) => (
-                                <p key={i} className={`text-slate-600 leading-relaxed ${paragraph === "Expertise" ? "font-bold text-slate-800 mb-[-8px]" : ""}`}>
-                                    {paragraph}
+                            {isExpanded ? (
+                                speaker.bio.map((paragraph, i) => (
+                                    <p key={i} className={`text-slate-600 leading-relaxed ${paragraph === "Expertise" ? "font-bold text-slate-800 mb-[-8px]" : ""}`}>
+                                        {paragraph}
+                                    </p>
+                                ))
+                            ) : (
+                                <p className="text-slate-600 leading-relaxed line-clamp-3">
+                                    {speaker.bio[0]}
                                 </p>
-                            ))}
+                            )}
+
+                            <button
+                                onClick={() => setIsExpanded(!isExpanded)}
+                                className="inline-flex items-center gap-1 text-sm font-semibold text-blue-600 hover:text-blue-700 transition-colors mt-1"
+                            >
+                                {isExpanded ? (
+                                    <>
+                                        Show less <ChevronUp size={16} />
+                                    </>
+                                ) : (
+                                    <>
+                                        Learn more <ChevronDown size={16} />
+                                    </>
+                                )}
+                            </button>
                         </div>
                     )}
                 </div>
