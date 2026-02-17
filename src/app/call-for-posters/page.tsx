@@ -94,7 +94,7 @@ export default function CallForPostersPage() {
               <ul className="space-y-4 text-slate-600">
                 <li className="flex items-start gap-2">
                   <CheckCircle2 size={18} className="text-slate-500 mt-1 shrink-0" />
-                  <span>Submission Deadline: <strong>16 Feb 2026</strong></span>
+                  <span>Submission Deadline: <span className="line-through mr-2">16 Feb 2026</span><strong>22 Feb 2026 (AoE)</strong></span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 size={18} className="text-slate-500 mt-1 shrink-0" />
