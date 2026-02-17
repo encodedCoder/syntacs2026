@@ -10,7 +10,6 @@ const scheduleData = [
       { time: "", event: "Department presentations by faculty members and PhD students" },
       { time: "", event: "Lab visits" },
       { time: "", event: "Open discussion" },
-      { time: "", event: "Director meeting with keynotes" },
     ]
   },
   {
@@ -34,7 +33,7 @@ const Schedule = () => {
   return (
     <section id="program" className="py-32 px-6 bg-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-100 to-transparent pointer-events-none" />
-      
+
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="flex flex-col md:flex-row md:items-center gap-6 mb-20">
           <h2 className="text-4xl md:text-6xl font-bold tracking-tighter">SYMPOSIUM PROGRAM</h2>
@@ -46,10 +45,10 @@ const Schedule = () => {
           {scheduleData.map((dayGroup, dayIndex) => (
             <div key={dayGroup.day}>
               <div className="mb-8 flex items-end gap-4">
-                 <h3 className="text-2xl font-bold text-slate-900">{dayGroup.day}</h3>
-                 <span className="text-slate-500 font-mono text-sm pb-1">{dayGroup.date}</span>
+                <h3 className="text-2xl font-bold text-slate-900">{dayGroup.day}</h3>
+                <span className="text-slate-500 font-mono text-sm pb-1">{dayGroup.date}</span>
               </div>
-              
+
               <div className="grid lg:grid-cols-2 gap-4">
                 {dayGroup.events.map((item, index) => (
                   <motion.div
@@ -64,7 +63,7 @@ const Schedule = () => {
                         <span className="text-slate-500 font-mono text-[9px] sm:text-[10px] uppercase tracking-widest">{item.time}</span>
                       </div>
                     )}
-                    
+
                     <div className="flex-grow">
                       <h3 className="text-sm sm:text-base font-bold tracking-tight text-slate-900 group-hover:text-slate-950 transition-colors">
                         {item.event}
