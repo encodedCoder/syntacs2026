@@ -333,10 +333,10 @@ export default function CallForPostersPage() {
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-8 text-slate-900">Registration Fee</h2>
           <div className="p-10 rounded-3xl bg-gradient-to-br from-slate-50 to-white border border-slate-200 shadow-sm">
             <div className="flex items-baseline gap-2 mb-6">
-              <span className="text-5xl font-bold text-slate-900">₹1500</span>
+              <span className="text-5xl font-bold text-slate-900">₹1000</span>
               <span className="text-xl text-slate-500 font-medium">/ participant</span>
             </div>
-            <p className="text-slate-500 text-sm mb-8">(inclusive of GST)</p>
+            <p className="text-slate-500 text-sm mb-8">(+ GST as applicable)</p>
 
             <h3 className="text-xl font-bold mb-4 text-slate-900">Includes:</h3>
             <ul className="space-y-3 text-slate-600">
