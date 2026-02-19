@@ -28,5 +28,19 @@ export const speakers = [
             "True to Tata spirit, Sachin Lodha has been involved in several community activities. For example, he is a member of ACM India Council and COMSNETS Association. He was a member of the Cyber4AI Task Force constituted by Principal Scientific Advisor to Government of India, a Steering Committee member for India wide Lightweight Cipher Design Challenge, a Working Group member for drafting the guidelines on “Anonymization of Data” under the project “e-Governance Standards and Guidelines” by MeitY, etc.",
             "Sachin Lodha graduated with a B.Tech. in Computer Science and Engineering from IIT Bombay and received his Ph.D. in Computer Science from Rutgers University, USA in 2002. He has been with TCS Innovation Labs in Pune ever since then. He is the first recipient of the TCS Distinguished Scientist Award for his sustained and high-impact contributions to research and business."
         ]
+    },
+    {
+        name: "Sumit Goswami",
+        role: "Vice President, Engineering",
+        org: "Qualcomm",
+        link: "https://www.linkedin.com/in/sumit-goswami-0614342/",
+        linkText: "View Profile",
+        image: "/speakers/sumit.jpg",
+        icon: Linkedin,
+        bio: [
+            "Sumit Goswami is Vice President, Engineering at Qualcomm, bringing expertise in hardware engineering and design automation within the semiconductor industry. Their background demonstrates versatile expertise across engineering leadership, hardware application, EDA methodologies, and physical design. Sumit has a proven ability to lead teams, manage projects, and collaborate with internal and external stakeholders.",
+            "Within Qualcomm's engineering environment, Sumit has progressed through various roles, including Senior Director, Engineering, and Director, Engineering. They have been responsible for delivering EDA solutions, leading hardware application engineering teams, and driving industry-academia partnerships. Sumit has also managed teams responsible for system design, circuit design, and post-silicon aspects of Qualcomm power management solutions.",
+            "Prior to Qualcomm, Sumit held positions at Intel, including Technical Lead and Manager, Cbd Design Automation. Earlier in their career, Sumit was a Senior RnD Engineer at Synopsys, contributing to the definition of Synopsys tool-based RTL2GDSII baseline flows, which were deployed to semiconductor design houses and foundry reference flows."
+        ]
     }
 ];
