@@ -24,11 +24,41 @@ export default function CommitteePage() {
     "Manish Kumar",
   ];
 
+  const volunteers = [
+    "Ajeet",
+    "Akanksha",
+    "Anamika",
+    "Anuj",
+    "Atul",
+    "Chetna",
+    "Devnath",
+    "Gurleen",
+    "Hemlata",
+    "Kousik",
+    "Kavitha",
+    "Manju",
+    "Mudit",
+    "Neha",
+    "Nishchala",
+    "Pravesh",
+    "Priyanka",
+    "Raman",
+    "Ravi",
+    "Sahil Pathak",
+    "Sanjana",
+    "Shradha",
+    "Tanya",
+    "Tejas",
+    "Vidhi",
+    "Vivek",
+    "Raushan",
+  ].sort((a, b) => a.localeCompare(b));
+
   return (
     <main className="min-h-screen bg-white">
       <Navbar />
-      
-      <PageHero 
+
+      <PageHero
         title="COMMITTEE"
         subtitle="ORGANIZERS"
         description="The dedicated team behind SYNTACS 2026."
@@ -36,7 +66,7 @@ export default function CommitteePage() {
 
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto space-y-16">
-          
+
           {/* Organizing Committee */}
           <div>
             <h2 className="text-3xl font-bold text-slate-900 mb-8 border-b pb-4">Organizing Committee</h2>
@@ -51,15 +81,14 @@ export default function CommitteePage() {
           </div>
 
           {/* Chairs */}
-          <div className="grid gap-8 md:grid-cols-2">
-            <div>
-              <h2 className="text-3xl font-bold text-slate-900 mb-8 border-b pb-4">Program Chair</h2>
+          <div>
+            <h2 className="text-3xl font-bold text-slate-900 mb-8 border-b pb-4">Program Chair</h2>
+            <div className="grid gap-6 md:grid-cols-2">
               <div className="bg-slate-50 p-6 rounded-2xl">
-                <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-8">
-                  <h3 className="text-xl font-bold text-slate-900">Shreya Bansal</h3>
-                  <div className="hidden md:block w-px h-6 bg-slate-300"></div>
-                  <h3 className="text-xl font-bold text-slate-900">Lownish Rai Sookha</h3>
-                </div>
+                <h3 className="text-xl font-bold text-slate-900">Shreya Bansal</h3>
+              </div>
+              <div className="bg-slate-50 p-6 rounded-2xl">
+                <h3 className="text-xl font-bold text-slate-900">Lownish Rai Sookha</h3>
               </div>
             </div>
           </div>
@@ -76,13 +105,28 @@ export default function CommitteePage() {
             </div>
           </div>
 
-          {/* Technical Program Committee */}
+          {/* Website Chair */}
           <div>
-            <div>
-              <h2 className="text-3xl font-bold text-slate-900 mb-8 border-b pb-4">Website Chair</h2>
+            <h2 className="text-3xl font-bold text-slate-900 mb-8 border-b pb-4">Website Chair</h2>
+            <div className="grid gap-6 md:grid-cols-2">
               <div className="bg-slate-50 p-6 rounded-2xl">
                 <h3 className="text-xl font-bold text-slate-900">Suresh</h3>
               </div>
+              <div className="bg-slate-50 p-6 rounded-2xl">
+                <h3 className="text-xl font-bold text-slate-900">Kshitiz</h3>
+              </div>
+            </div>
+          </div>
+
+          {/* Volunteers */}
+          <div>
+            <h2 className="text-3xl font-bold text-slate-900 mb-8 border-b pb-4">Volunteers</h2>
+            <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+              {volunteers.map((name) => (
+                <div key={name} className="bg-slate-50 p-4 rounded-xl">
+                  <p className="font-semibold text-slate-800">{name}</p>
+                </div>
+              ))}
             </div>
           </div>
 
