@@ -103,7 +103,7 @@ const WelcomeSection = () => {
                   <span className="text-slate-900 font-medium">SYNTACS</span> aims to be the largest platform in Northern India to informally share and discuss research ideas in computer science. We would like to bring all academic institutes in Punjab, Haryana, Delhi, Chandigarh and Himalayan regions who are working on computer science related areas to showcase their research and demonstrations.
                 </p>
                 <p>
-                  The event features talks by two prominent speakers, providing attendees with valuable insights into cutting-edge research and industry trends. It will also include engaging poster and demo sessions that allow research scholars to present their work, receive feedback, and engage in meaningful discussions with peers and experts.
+                  The event features talks by three prominent speakers, providing attendees with valuable insights into cutting-edge research and industry trends. It will also include engaging poster and demo sessions that allow research scholars to present their work, receive feedback, and engage in meaningful discussions with peers and experts.
                 </p>
                 <p>
                   We invite researchers to be part of <span className="text-slate-900 font-medium">SYNTACS</span> and experience a day focused on learning, interaction, and collaborative opportunities.

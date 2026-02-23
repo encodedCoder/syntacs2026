@@ -12,6 +12,7 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const { scrollY } = useScroll();
 
   useEffect(() => {
@@ -32,7 +33,14 @@ const Navbar = () => {
 
   const navLinks = [
     { name: "Keynotes", href: "/keynotes" },
-    { name: "Program", href: "/program" },
+    {
+      name: "Program",
+      href: "/program",
+      subLinks: [
+        { name: "Main Program", href: "/program" },
+        { name: "Hackathon", href: "/program/hackathon" },
+      ]
+    },
     { name: "Venue", href: "/venue" },
     { name: "Committee", href: "/committee" },
     { name: "FAQ", href: "/faq" },
@@ -70,13 +78,44 @@ const Navbar = () => {
           <div className="flex items-center gap-6 md:gap-12">
             <div className="hidden md:flex items-center gap-10">
               {navLinks.map((link) => (
-                <Link
+                <div
                   key={link.name}
-                  href={link.href}
-                  className="px-4 py-1.5 sm:px-8 sm:py-2.5 text-[10px] sm:text-sm font-medium rounded-full tracking-tight bg-slate-900 text-white hover:bg-slate-800 hover:scale-105 transition-all duration-300 shadow-lg"
+                  className="relative"
+                  onMouseEnter={() => link.subLinks && setActiveDropdown(link.name)}
+                  onMouseLeave={() => setActiveDropdown(null)}
                 >
-                  {link.name}
-                </Link>
+                  <Link
+                    href={link.href}
+                    className="px-4 py-1.5 sm:px-8 sm:py-2.5 text-[10px] sm:text-sm font-medium rounded-full tracking-tight bg-slate-900 text-white hover:bg-slate-800 hover:scale-105 transition-all duration-300 shadow-lg block"
+                  >
+                    {link.name}
+                  </Link>
+
+                  {link.subLinks && (
+                    <AnimatePresence>
+                      {activeDropdown === link.name && (
+                        <motion.div
+                          initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                          animate={{ opacity: 1, y: 0, scale: 1 }}
+                          exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                          transition={{ duration: 0.2 }}
+                          className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-64 bg-white border border-slate-200 rounded-2xl shadow-xl overflow-hidden py-2"
+                        >
+                          {link.subLinks.map((subLink) => (
+                            <Link
+                              key={subLink.name}
+                              href={subLink.href}
+                              className="block px-6 py-3 text-sm text-slate-600 hover:text-slate-900 hover:bg-slate-50 transition-colors"
+                              onClick={() => setActiveDropdown(null)}
+                            >
+                              {subLink.name}
+                            </Link>
+                          ))}
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  )}
+                </div>
               ))}
             </div>
 
@@ -101,23 +140,39 @@ const Navbar = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-[90] bg-white pt-32 px-10 md:hidden"
+            className="fixed inset-0 z-[90] bg-white pt-32 px-10 md:hidden overflow-y-auto"
           >
-            <div className="flex flex-col gap-10">
+            <div className="flex flex-col gap-8 pb-20">
               {navLinks.map((link, index) => (
                 <motion.div
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.1 * (index + 1) }}
                   key={link.name}
+                  className="space-y-4"
                 >
                   <Link
                     href={link.href}
-                    onClick={() => setIsMobileMenuOpen(false)}
+                    onClick={() => !link.subLinks && setIsMobileMenuOpen(false)}
                     className="text-4xl font-bold tracking-tighter text-slate-400 hover:text-slate-900 transition-colors"
                   >
                     {link.name}
                   </Link>
+
+                  {link.subLinks && (
+                    <div className="flex flex-col gap-4 pl-4 border-l-2 border-slate-100">
+                      {link.subLinks.map((subLink) => (
+                        <Link
+                          key={subLink.name}
+                          href={subLink.href}
+                          onClick={() => setIsMobileMenuOpen(false)}
+                          className="text-xl font-semibold text-slate-500 hover:text-slate-900"
+                        >
+                          {subLink.name}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
                 </motion.div>
               ))}
 
@@ -125,7 +180,7 @@ const Navbar = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.5 }}
-                className="mt-10 pt-10 border-t border-white/5"
+                className="mt-6 pt-10 border-t border-slate-100"
               >
                 <p className="text-slate-400 font-mono text-xs uppercase tracking-widest mb-4">Symposium Venue</p>
                 <p className="text-slate-600 text-lg">IIT Ropar, Punjab, India</p>
