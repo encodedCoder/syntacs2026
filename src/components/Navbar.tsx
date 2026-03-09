@@ -42,6 +42,7 @@ const Navbar = () => {
       ]
     },
     { name: "Venue", href: "/venue" },
+    { name: "Registration", href: "/registration" },
     { name: "Committee", href: "/committee" },
     { name: "FAQ", href: "/faq" },
   ];

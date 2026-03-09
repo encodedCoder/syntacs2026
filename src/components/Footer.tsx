@@ -47,8 +47,15 @@ const Footer = () => {
               ))}
             </div>
 
-            <div className="mt-8">
+            <div className="mt-8 flex flex-col gap-4">
               <CallForPostersButton />
+              <Link
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdve_Fhj2k21r7BPDXJYxLi--LlQbYjbbRxIVYQ4BMknNQJbg/viewform?usp=publish-editor"
+                target="_blank"
+                className="inline-flex px-8 py-3 md:px-10 md:py-4 bg-slate-900 hover:bg-slate-800 text-white text-xs md:text-sm font-bold tracking-[0.2em] uppercase rounded-full transition-all duration-300 shadow-lg items-center justify-center gap-2 border border-slate-800 w-fit"
+              >
+                Register Now
+              </Link>
             </div>
           </div>
 
@@ -59,6 +66,7 @@ const Footer = () => {
               <li><Link href="/" className="text-sm text-black hover:text-slate-900 transition-colors">Home</Link></li>
               <li><Link href="/keynotes" className="text-sm text-black hover:text-slate-900 transition-colors">Keynotes</Link></li>
               <li><Link href="/program" className="text-sm text-black hover:text-slate-900 transition-colors">Program</Link></li>
+              <li><Link href="/registration" className="text-sm text-black hover:text-slate-900 transition-colors">Registration</Link></li>
               <li><Link href="/venue" className="text-sm text-black hover:text-slate-900 transition-colors">Venue</Link></li>
             </ul>
 
