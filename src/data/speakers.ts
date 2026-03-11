@@ -30,17 +30,33 @@ export const speakers = [
         ]
     },
     {
-        name: "Sumit Goswami",
-        role: "Vice President, Engineering",
-        org: "Qualcomm",
-        link: "https://www.linkedin.com/in/sumit-goswami-0614342/",
+        name: "Niranjan Singh Manohar",
+        role: "AI BP Solutions - GTM & Strategy",
+        org: "Microsoft",
+        link: "https://www.linkedin.com/in/niranjan-singh-manohar-94a7594/",
         linkText: "View Profile",
-        image: "/speakers/sumit.jpg",
+        image: "/speakers/niranjan.jpg",
         icon: Linkedin,
         bio: [
-            "Sumit Goswami is Vice President, Engineering at Qualcomm, bringing expertise in hardware engineering and design automation within the semiconductor industry. Their background demonstrates versatile expertise across engineering leadership, hardware application, EDA methodologies, and physical design. Sumit has a proven ability to lead teams, manage projects, and collaborate with internal and external stakeholders.",
-            "Within Qualcomm's engineering environment, Sumit has progressed through various roles, including Senior Director, Engineering, and Director, Engineering. They have been responsible for delivering EDA solutions, leading hardware application engineering teams, and driving industry-academia partnerships. Sumit has also managed teams responsible for system design, circuit design, and post-silicon aspects of Qualcomm power management solutions.",
-            "Prior to Qualcomm, Sumit held positions at Intel, including Technical Lead and Manager, Cbd Design Automation. Earlier in their career, Sumit was a Senior RnD Engineer at Synopsys, contributing to the definition of Synopsys tool-based RTL2GDSII baseline flows, which were deployed to semiconductor design houses and foundry reference flows."
+            "Niranjan leads the AI BP solutions Go to Market & Strategy for India & South Asia at Microsoft. He focuses on helping organizations automate manual processes, providing deep insights into data, and scoping the use of AI to improve productivity using Copilot at scale.",
+            "With extensive experience as a CX consultant, Niranjan is passionate about advising brands on ways to enhance engagement with their consumers. He has a unique perspective on how disruptors change the rules of the game and unsettle large businesses, providing him with amazing insights into competitive strategies for both traditional and new-age organizations.",
+            "Expertise",
+            "AI Strategy, Go-to-Market, Customer Experience, Digital Transformation"
+        ]
+    },
+    {
+        name: "Dr. Himanshu Tagra",
+        role: "Business Head – Online & ISV Business",
+        org: "HCL Technologies",
+        link: "https://www.linkedin.com/in/dr-himanshu-tagra-8a58661/",
+        linkText: "View Profile",
+        image: "/speakers/Himanshu.jpg",
+        icon: Linkedin,
+        bio: [
+            "Dr. Himanshu Tagra is the Business Head – Online & ISV Business at HCL Technologies, leading a $200M Software Product Engineering unit with over 3,000 engineers across India, US, Europe, and APAC. He has a proven track record in data engineering, cloud, AI, and delivery excellence.",
+            "With a Ph.D. in AI from IIT Delhi, Dr. Tagra has grown key accounts from inception to over $100M in annual revenue multiple times. He has established numerous Centers of Excellence in Data Engineering, GCP, and Mainframe Modernization, and is currently driving GenAI strategy adoption for large-scale organizations.",
+            "Expertise",
+            "Software Product Engineering, AI & Machine Learning, Cloud Strategy, Digital Transformation"
         ]
     }
 ];
