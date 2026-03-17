@@ -16,15 +16,17 @@ const scheduleData = [
     day: "Day 1",
     date: "March 21, 2026",
     events: [
-      { time: "09:30 AM", event: "Inauguration" },
-      { time: "10:00 AM", event: "Keynote 1" },
-      { time: "11:00 AM", event: "Posters" },
-      { time: "01:00 PM", event: "Lunch" },
-      { time: "02:30 PM", event: "Keynote 2" },
-      { time: "03:30 PM", event: "Keynote 3" },
-      { time: "04:30 PM", event: "Flash talks by selected students" },
-      { time: "05:30 PM", event: "Ask me anything" },
-      { time: "06:00 PM", event: "Awards" },
+      { time: "09:00 AM - 09:30 AM", event: "Inauguration" },
+      { time: "09:30 AM - 10:30 AM", event: "Keynote 1" },
+      { time: "10:30 AM - 11:30 AM", event: "Keynote 2" },
+      { time: "11:30 AM - 11:40 AM", event: "High Tea 1" },
+      { time: "11:40 AM - 01:30 PM", event: "Poster Presentation" },
+      { time: "01:30 PM - 02:30 PM", event: "Lunch Break" },
+      { time: "02:30 PM - 03:30 PM", event: "Keynote 3" },
+      { time: "03:30 PM - 04:30 PM", event: "Keynote 4" },
+      { time: "04:30 PM - 04:40 PM", event: "High Tea 2" },
+      { time: "04:40 PM - 05:30 PM", event: "Lightning Talks (Only for Selected Posters)" },
+      { time: "05:30 PM - 06:00 PM", event: "Thanks and Results" },
     ]
   }
 ];
@@ -59,8 +61,8 @@ const Schedule = () => {
                     className="group flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6 p-5 sm:p-6 rounded-2xl bg-white border border-slate-200 hover:bg-slate-50 hover:border-slate-300 transition-all duration-300 shadow-sm"
                   >
                     {item.time && (
-                      <div className="sm:w-32 flex-shrink-0">
-                        <span className="text-slate-500 font-mono text-[9px] sm:text-[10px] uppercase tracking-widest">{item.time}</span>
+                      <div className="sm:w-48 flex-shrink-0">
+                        <span className="text-slate-500 font-mono text-[9px] sm:text-[10px] uppercase tracking-widest whitespace-nowrap">{item.time}</span>
                       </div>
                     )}
 
