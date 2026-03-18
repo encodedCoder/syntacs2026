@@ -5,10 +5,10 @@ import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 const schedule = [
-  { time: "Day 1 | 09:00 AM", event: "Inauguration", location: "Seminar Hall" },
-  { time: "Day 1 | 09:30 AM", event: "Keynote 1 by Dr. Himanshu Tagra", location: "Seminar Hall" },
+  { time: "Day 1 | 09:00 AM", event: "Inauguration", location: "CSE Seminar Hall" },
+  { time: "Day 1 | 09:30 AM", event: "Keynote 1 by Dr. Himanshu Tagra", location: "CSE Seminar Hall" },
   { time: "Day 1 | 11:40 AM", event: "Posters", location: "Open Area CSE Department" },
-  { time: "Day 1 | 02:30 PM", event: "Keynote 3 by Prof. R. Govindarajan", location: "Seminar Hall" },
+  { time: "Day 1 | 02:30 PM", event: "Keynote 3 by Prof. R. Govindarajan", location: "CSE Seminar Hall" },
 ];
 
 const ProgramPreview = () => {

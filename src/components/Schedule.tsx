@@ -92,7 +92,7 @@ const Schedule = () => {
                       <div className="flex-shrink-0 sm:border-l sm:border-slate-200 sm:pl-4">
                         <span className="sm:hidden text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1 block mt-2">Venue</span>
                         <span className="inline-flex items-center text-[11px] sm:text-xs font-medium text-slate-500 bg-slate-100 px-2.5 py-1 rounded-md">
-                          {(item as any).venue || "Seminar Hall"}
+                          {(item as any).venue || "CSE Seminar Hall"}
                         </span>
                       </div>
                     </motion.div>
