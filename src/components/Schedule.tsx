@@ -17,16 +17,16 @@ const scheduleData = [
     date: "March 21, 2026",
     events: [
       { time: "09:00 AM - 09:30 AM", event: "Inauguration" },
-      { time: "09:30 AM - 10:30 AM", event: "Keynote 1" },
-      { time: "10:30 AM - 11:30 AM", event: "Keynote 2" },
-      { time: "11:30 AM - 11:40 AM", event: "High Tea 1" },
-      { time: "11:40 AM - 01:30 PM", event: "Poster Presentation" },
-      { time: "01:30 PM - 02:30 PM", event: "Lunch Break" },
-      { time: "02:30 PM - 03:30 PM", event: "Keynote 3" },
-      { time: "03:30 PM - 04:30 PM", event: "Keynote 4" },
-      { time: "04:30 PM - 04:40 PM", event: "High Tea 2" },
+      { time: "09:30 AM - 10:30 AM", event: "Keynote 1 by Dr. Himanshu Tagra, Business Head – Online & ISV Business, HCL Technologies" },
+      { time: "10:30 AM - 11:30 AM", event: "Keynote 2 by Dr. Sachin Lodha, Chief Scientist, TCS Research" },
+      { time: "11:30 AM - 11:40 AM", event: "High Tea 1", venue: "Open Area CSE Department" },
+      { time: "11:40 AM - 01:30 PM", event: "Poster Presentation", venue: "Open Area CSE Department" },
+      { time: "01:30 PM - 02:30 PM", event: "Lunch", venue: "Open Area CSE Department" },
+      { time: "02:30 PM - 03:30 PM", event: "Keynote 3 by Prof. R. Govindarajan, Professor, IISc Bangalore" },
+      { time: "03:30 PM - 04:30 PM", event: "Keynote 4 by Niranjan Singh Manohar, AI BP Solutions - GTM & Strategy, Microsoft" },
+      { time: "04:30 PM - 04:40 PM", event: "High Tea 2", venue: "Open Area CSE Department" },
       { time: "04:40 PM - 05:30 PM", event: "Lightning Talks (Only for Selected Posters)" },
-      { time: "05:30 PM - 06:00 PM", event: "Thanks and Results" },
+      { time: "05:30 PM - 06:00 PM", event: "Awards and Closing Ceremony" },
     ]
   }
 ];
@@ -92,7 +92,7 @@ const Schedule = () => {
                       <div className="flex-shrink-0 sm:border-l sm:border-slate-200 sm:pl-4">
                         <span className="sm:hidden text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1 block mt-2">Venue</span>
                         <span className="inline-flex items-center text-[11px] sm:text-xs font-medium text-slate-500 bg-slate-100 px-2.5 py-1 rounded-md">
-                          Seminar Hall
+                          {(item as any).venue || "Seminar Hall"}
                         </span>
                       </div>
                     </motion.div>
