@@ -17,8 +17,8 @@ const scheduleData = [
     date: "March 21, 2026",
     events: [
       { time: "09:00 AM - 09:30 AM", event: "Inauguration" },
-      { time: "09:30 AM - 10:30 AM", event: "Keynote 1 by Dr. Himanshu Tagra (Business Head – Online & ISV Business, HCL Technologies)" },
-      { time: "10:30 AM - 11:30 AM", event: "Keynote 2 by Dr. Sachin Lodha (Chief Scientist, TCS Research)" },
+      { time: "09:30 AM - 10:30 AM", event: "Keynote 1 by Dr. Sachin Lodha (Chief Scientist, TCS Research)" },
+      { time: "10:30 AM - 11:30 AM", event: "Keynote 2 by Dr. Himanshu Tagra (Business Head – Online & ISV Business, HCL Technologies)" },
       { time: "11:30 AM - 11:40 AM", event: "High Tea 1", venue: "Open Area (CSE)" },
       { time: "11:40 AM - 01:30 PM", event: "Poster Presentation", venue: "Open Area (CSE)" },
       { time: "01:30 PM - 02:30 PM", event: "Lunch", venue: "Open Area (CSE)" },
