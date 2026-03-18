@@ -8,7 +8,7 @@ const scheduleData = [
     date: "March 20, 2026",
     events: [
       { time: "TBA", event: "Department presentations by faculty members and PhD students", venue: "TBA" },
-      { time: "TBA", event: "Lab visits", venue: "TBA" },
+      { time: "TBA", event: "Lab visits", venue: "CSE Department" },
       { time: "TBA", event: "Open discussion", venue: "TBA" },
     ]
   },
@@ -19,12 +19,12 @@ const scheduleData = [
       { time: "09:00 AM - 09:30 AM", event: "Inauguration" },
       { time: "09:30 AM - 10:30 AM", event: "Keynote 1 by Dr. Himanshu Tagra (Business Head – Online & ISV Business, HCL Technologies)" },
       { time: "10:30 AM - 11:30 AM", event: "Keynote 2 by Dr. Sachin Lodha (Chief Scientist, TCS Research)" },
-      { time: "11:30 AM - 11:40 AM", event: "High Tea 1", venue: "Open Area CSE Department" },
-      { time: "11:40 AM - 01:30 PM", event: "Poster Presentation", venue: "Open Area CSE Department" },
-      { time: "01:30 PM - 02:30 PM", event: "Lunch", venue: "Open Area CSE Department" },
+      { time: "11:30 AM - 11:40 AM", event: "High Tea 1", venue: "Open Area (CSE)" },
+      { time: "11:40 AM - 01:30 PM", event: "Poster Presentation", venue: "Open Area (CSE)" },
+      { time: "01:30 PM - 02:30 PM", event: "Lunch", venue: "Open Area (CSE)" },
       { time: "02:30 PM - 03:30 PM", event: "Keynote 3 by Prof. R. Govindarajan (Professor, IISc Bangalore)" },
       { time: "03:30 PM - 04:30 PM", event: "Keynote 4 by Niranjan Singh Manohar (AI BP Solutions - GTM & Strategy, Microsoft)" },
-      { time: "04:30 PM - 04:40 PM", event: "High Tea 2", venue: "Open Area CSE Department" },
+      { time: "04:30 PM - 04:40 PM", event: "High Tea 2", venue: "Open Area (CSE)" },
       { time: "04:40 PM - 05:30 PM", event: "Lightning Talks (Only for Selected Posters)" },
       { time: "05:30 PM - 06:00 PM", event: "Awards and Closing Ceremony" },
     ]
