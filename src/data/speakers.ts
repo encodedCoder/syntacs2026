@@ -3,7 +3,7 @@ import { Linkedin, Globe } from "lucide-react";
 export const speakers = [
     {
         name: "Dr. Sachin Lodha",
-        role: "Chief Scientist",
+        role: "Head",
         org: "TCS Research",
         link: "https://www.linkedin.com/in/sachin-lodha-8ba2991/",
         linkText: "View Profile",
